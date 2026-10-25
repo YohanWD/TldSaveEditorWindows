@@ -239,19 +239,19 @@ public partial class MainWindow : Window
 
     private void AddItem_Click(object sender, RoutedEventArgs e)
     {
-        var prefab = NewPrefabBox.Text.Trim();
-        if (inventory is null || !prefab.StartsWith("GEAR_") || prefab.Length <= "GEAR_".Length)
-        {
-            MessageBox.Show(this, "Enter a prefab name starting with GEAR_, e.g. GEAR_InsulatedFlask_A.", "Add item");
-            return;
-        }
-        var item = inventory.Add(prefab);
+        if (inventory is null) return;
+        var dialog = new AddItemWindow { Owner = this };
+        if (dialog.ShowDialog() != true) return;
+
+        var prefab = dialog.SelectedItem?.Name ?? dialog.CustomPrefabName!;
+        var item = inventory.Add(prefab, dialog.SelectedItem?.Template);
+        if (item.IsStackable) item.Units = dialog.Quantity;
         item.PropertyChanged += Item_PropertyChanged;
         items.Add(item);
         ItemsList.SelectedItem = item;
         ItemsList.ScrollIntoView(item);
         SetDirty(true);
-        SetStatus($"Added {prefab}. Prefab names are not validated — a wrong name may be dropped by the game.");
+        SetStatus(item.IsStackable ? $"Added {prefab} ×{item.Units}" : $"Added {prefab}");
     }
 
     private void RemoveItem_Click(object sender, RoutedEventArgs e)

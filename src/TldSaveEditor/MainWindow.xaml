@@ -103,10 +103,8 @@
                         </Grid.ColumnDefinitions>
 
                         <DockPanel>
-                            <DockPanel DockPanel.Dock="Bottom" Margin="0,6,0,0">
-                                <Button DockPanel.Dock="Right" Content="Add" Click="AddItem_Click" Margin="6,0,0,0" />
-                                <TextBox x:Name="NewPrefabBox" ToolTip="Prefab name, e.g. GEAR_InsulatedFlask_A" VerticalContentAlignment="Center" Text="GEAR_" />
-                            </DockPanel>
+                            <Button DockPanel.Dock="Bottom" Content="Add item…" Click="AddItem_Click" Margin="0,6,0,0"
+                                    HorizontalAlignment="Stretch" />
                             <DockPanel DockPanel.Dock="Top" Margin="0,0,0,6">
                                 <ComboBox x:Name="CategoryFilter" DockPanel.Dock="Left" Width="150" Margin="0,0,6,0"
                                           SelectionChanged="CategoryFilter_SelectionChanged" />

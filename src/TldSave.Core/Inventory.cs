@@ -34,20 +34,29 @@ public sealed class Inventory
         return new Inventory(save, root, items);
     }
 
-    public InventoryItem Add(string prefabName)
+    /// <summary>
+    /// Adds a new item. <paramref name="template"/> (from <see cref="ItemCatalog"/>) supplies the item's component
+    /// data (stack, food, flask contents...); without it the item only gets the basic fields.
+    /// </summary>
+    public InventoryItem Add(string prefabName, JObject? template = null)
     {
-        // Same defaults as the original TS editor, but timestamped "now" so the item doesn't decay on load
+        var now = save.HoursPlayed;
         var gear = new JObject
         {
-            ["m_HoursPlayed"] = save.HoursPlayed,
+            // Timestamped "now" so the item doesn't decay on load
+            ["m_HoursPlayed"] = now,
             ["m_Position"] = new JArray(0.0, 0.0, 0.0),
             ["m_Rotation"] = new JArray(0.0, 0.0, 0.0, 1.0),
-            ["m_NormalizedCondition"] = 1.0,
             ["m_InstanceIDProxy"] = Random.Shared.Next(1, int.MaxValue),
-            ["m_GearItemSaveVersion"] = 4,
         };
-        // If this prefab is already in the inventory as a stack, start the new one as a stack of 1
-        if (Items.Any(i => i.PrefabName == prefabName && i.IsStackable))
+        if (template is not null)
+            gear.Merge(template.DeepClone(), new JsonMergeSettings { MergeArrayHandling = MergeArrayHandling.Replace });
+        gear["m_NormalizedCondition"] ??= 1.0;
+        gear["m_GearItemSaveVersion"] ??= 4;
+        StampComponentTimes(gear, now);
+
+        // No template, but this prefab is already in the inventory as a stack: start the new one as a stack of 1
+        if (gear["m_StackableItemSerialized"] is null && Items.Any(i => i.PrefabName == prefabName && i.IsStackable))
             gear["m_StackableItemSerialized"] = TldJson.Serialize(new JObject { ["m_UnitsProxy"] = 1 });
 
         var entry = new JObject
@@ -58,6 +67,18 @@ public sealed class Inventory
         var item = new InventoryItem(entry);
         Items.Add(item);
         return item;
+    }
+
+    /// <summary>Components such as food keep their own m_HoursPlayed timestamp; set those to "now" too.</summary>
+    private static void StampComponentTimes(JObject gear, double now)
+    {
+        foreach (var property in gear.Properties().Where(p => p.Name.EndsWith("Serialized")).ToList())
+        {
+            if (property.Value.Type != JTokenType.String || !((string?)property.Value)!.StartsWith('{')) continue;
+            if (gear.ReadNested(property.Name) is not JObject component || component["m_HoursPlayed"] is null) continue;
+            component["m_HoursPlayed"] = now;
+            gear.WriteNested(property.Name, component);
+        }
     }
 
     public void Remove(InventoryItem item) => Items.Remove(item);

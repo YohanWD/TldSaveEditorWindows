@@ -1,0 +1,5039 @@
+[
+  {
+    "name": "GEAR_Accelerant",
+    "category": "FireStarting",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 100000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 500.0
+    }
+  },
+  {
+    "name": "GEAR_AccelerantGunpowder",
+    "category": "FireStarting",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_AccelerantKerosene",
+    "category": "FireStarting",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_AccelerantMedium",
+    "category": "FireStarting",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_BarkTinder",
+    "category": "FireStarting",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 50000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_BookA",
+    "category": "FireStarting",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 0.5,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_BookB",
+    "category": "FireStarting",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 0.5,
+      "m_GearItemSaveVersion": 2,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_BookBopen",
+    "category": "FireStarting",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_BookC",
+    "category": "FireStarting",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_BookD",
+    "category": "FireStarting",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_BookE",
+    "category": "FireStarting",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_BookEopen",
+    "category": "FireStarting",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_BookF",
+    "category": "FireStarting",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_BookFopen",
+    "category": "FireStarting",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_BookG",
+    "category": "FireStarting",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_BookH",
+    "category": "FireStarting",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_BookHopen",
+    "category": "FireStarting",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_BookI",
+    "category": "FireStarting",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_BookLabE_01",
+    "category": "FireStarting",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_BookLabE_02",
+    "category": "FireStarting",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_BookLabE_03",
+    "category": "FireStarting",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_BookLabE_Open_01",
+    "category": "FireStarting",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_BookManual",
+    "category": "FireStarting",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_CattailTinder",
+    "category": "FireStarting",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 0.05,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_Charcoal",
+    "category": "FireStarting",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 0.1,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_Coal",
+    "category": "FireStarting",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 0.3,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_Firestriker",
+    "category": "FireStarting",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 100000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_FlintAndSteel",
+    "category": "FireStarting",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_Hardwood",
+    "category": "FireStarting",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 1.0,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_MagnifyingLens",
+    "category": "FireStarting",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 100000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_Newsprint",
+    "category": "FireStarting",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 0.1,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_NewsprintBootStuffing",
+    "category": "FireStarting",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_NewsprintInsulation",
+    "category": "FireStarting",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_NewsprintRoll",
+    "category": "FireStarting",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 0.1,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_PackMatches",
+    "category": "FireStarting",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_MatchesItemSerialized": "{\"m_BurnTimeGametimeSeconds\":149.5726,\"m_ElapsedBurnGametimeSeconds\":149.5986,\"m_Ignited\":false,\"m_IsFresh\":true}",
+      "m_WeightKG": 0.1,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":false}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_ReclaimedWoodB",
+    "category": "FireStarting",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 0.25,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_Softwood",
+    "category": "FireStarting",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 0.5,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_Stick",
+    "category": "FireStarting",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 0.15,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 50.0
+    }
+  },
+  {
+    "name": "GEAR_Tinder",
+    "category": "FireStarting",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 0.05,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_WoodMatches",
+    "category": "FireStarting",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_MatchesItemSerialized": "{}",
+      "m_WeightKG": 0.1,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_BirchbarkPrepared",
+    "category": "FirstAid",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 50000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 1500.0
+    }
+  },
+  {
+    "name": "GEAR_BottleAntibiotics",
+    "category": "FirstAid",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 0.1,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 1000.0
+    }
+  },
+  {
+    "name": "GEAR_BottleHydrogenPeroxide",
+    "category": "FirstAid",
+    "source": "survival",
+    "template": {
+      "m_LiquidItemSerialized": "{\"m_LiquidLitersProxy\":500000000,\"m_LiquidQuality\":\"NonPotable\"}",
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_BottlePainKillers",
+    "category": "FirstAid",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 0.1,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 1000.0
+    }
+  },
+  {
+    "name": "GEAR_CompressionBandage",
+    "category": "FirstAid",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_EmergencyStim",
+    "category": "FirstAid",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 0.1,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_HeatPad",
+    "category": "FirstAid",
+    "source": "other-modes",
+    "template": {
+      "m_WeightKG": 100000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_HeatPadSerialized": {},
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_HeavyBandage",
+    "category": "FirstAid",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 0.1,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_Insulin",
+    "category": "FirstAid",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_MedicalSupplies",
+    "category": "FirstAid",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_MedicalSupplies_hangar",
+    "category": "FirstAid",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_MilitaryStim",
+    "category": "FirstAid",
+    "source": "other-modes",
+    "template": {
+      "m_WeightKG": 100000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_OldMansBeardDressing",
+    "category": "FirstAid",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 100000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_ReishiPrepared",
+    "category": "FirstAid",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 0.05,
+      "m_GearItemSaveVersion": 2,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 1500.0
+    }
+  },
+  {
+    "name": "GEAR_RosehipsPrepared",
+    "category": "FirstAid",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 50000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 1500.0
+    }
+  },
+  {
+    "name": "GEAR_TraumaKit",
+    "category": "FirstAid",
+    "source": "other-modes",
+    "template": {
+      "m_WeightKG": 750000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_WaterPurificationTablets",
+    "category": "FirstAid",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 0.25,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 500.0
+    }
+  },
+  {
+    "name": "GEAR_AstridBoots",
+    "category": "Clothing",
+    "source": "other-modes",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":0.9769861}",
+      "m_WeightKG": 1000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 150.0
+    }
+  },
+  {
+    "name": "GEAR_AstridGloves",
+    "category": "Clothing",
+    "source": "other-modes",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":0.9769861}",
+      "m_WeightKG": 100000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 75.0
+    }
+  },
+  {
+    "name": "GEAR_AstridJacket",
+    "category": "Clothing",
+    "source": "other-modes",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":0.9769861}",
+      "m_WeightKG": 1250000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 250.0
+    }
+  },
+  {
+    "name": "GEAR_AstridJeans",
+    "category": "Clothing",
+    "source": "other-modes",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":0.9769861}",
+      "m_WeightKG": 500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_AstridSweater",
+    "category": "Clothing",
+    "source": "other-modes",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":0.9769861}",
+      "m_WeightKG": 250000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_AstridToque",
+    "category": "Clothing",
+    "source": "other-modes",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":0.9769861}",
+      "m_WeightKG": 150000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_AviatorCap",
+    "category": "Clothing",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_Balaclava",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_PercentWet\":0.0,\"m_PercentFrozen\":0.0,\"m_HoursPlayed\":344.6433,\"m_HoursRemainingOnCloseFire\":0,\"m_DroppedIndoors\":false}",
+      "m_WeightKG": 0.25,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":false}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_BallisticVest",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":147.419159}",
+      "m_WeightKG": 6000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 2500.0
+    }
+  },
+  {
+    "name": "GEAR_BaseballCap",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_PercentWet\":0.0,\"m_HoursPlayed\":1.28222024}",
+      "m_WeightKG": 0.1,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0
+    }
+  },
+  {
+    "name": "GEAR_BasicBoots",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_PercentWet\":0.0,\"m_PercentFrozen\":0.0,\"m_HoursPlayed\":0.01102319,\"m_HoursRemainingOnCloseFire\":0,\"m_DroppedIndoors\":false}",
+      "m_WeightKG": 1,
+      "m_GearItemSaveVersion": 1,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 150.0
+    }
+  },
+  {
+    "name": "GEAR_BasicGloves",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_PercentWet\":0.0,\"m_PercentFrozen\":0.0,\"m_HoursPlayed\":23.47616,\"m_HoursRemainingOnCloseFire\":0,\"m_DroppedIndoors\":false}",
+      "m_WeightKG": 0.1,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 50.0
+    }
+  },
+  {
+    "name": "GEAR_BasicShoes",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":66.83123}",
+      "m_WeightKG": 0.5,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_BasicWinterCoat",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_HoursPlayed\":160.896484}",
+      "m_WeightKG": 500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 75.0
+    }
+  },
+  {
+    "name": "GEAR_BasicWoolHat",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":66.83123}",
+      "m_WeightKG": 0.1,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 50.0
+    }
+  },
+  {
+    "name": "GEAR_BasicWoolScarf",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_HoursPlayed\":66.83123}",
+      "m_WeightKG": 0.1,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_BearSkinCoat",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":7752.188}",
+      "m_WeightKG": 5000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 750.0
+    }
+  },
+  {
+    "name": "GEAR_CargoPants",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_PercentWet\":0.0,\"m_PercentFrozen\":0.0,\"m_HoursPlayed\":344.6433,\"m_HoursRemainingOnCloseFire\":0,\"m_DroppedIndoors\":false}",
+      "m_WeightKG": 0.75,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":false}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 150.0
+    }
+  },
+  {
+    "name": "GEAR_ClimbingSocks",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":7752.188}",
+      "m_WeightKG": 250000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_CombatBoots",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":137.834076}",
+      "m_WeightKG": 2000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 150.0
+    }
+  },
+  {
+    "name": "GEAR_CombatPants",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":137.834076}",
+      "m_WeightKG": 750000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 150.0
+    }
+  },
+  {
+    "name": "GEAR_CottonHoodie",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_PercentWet\":0.0,\"m_HoursPlayed\":1.28222024}",
+      "m_WeightKG": 0.25,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_CottonScarf",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_PercentWet\":0.0,\"m_PercentFrozen\":0.0,\"m_HoursPlayed\":40.81423,\"m_HoursRemainingOnCloseFire\":0,\"m_DroppedIndoors\":false}",
+      "m_WeightKG": 0.1,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 75.0
+    }
+  },
+  {
+    "name": "GEAR_CottonShirt",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_HoursPlayed\":5400.297,\"m_DroppedIndoors\":true}",
+      "m_WeightKG": 250000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 75.0
+    }
+  },
+  {
+    "name": "GEAR_CottonSocks",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_HoursPlayed\":1.28222024}",
+      "m_WeightKG": 0.1,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0
+    }
+  },
+  {
+    "name": "GEAR_CottonSocksStart",
+    "category": "Clothing",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_CougarWrap",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":7752.188}",
+      "m_WeightKG": 1000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 600.0
+    }
+  },
+  {
+    "name": "GEAR_CowichanSweater",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":7752.188}",
+      "m_WeightKG": 1000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 300.0
+    }
+  },
+  {
+    "name": "GEAR_Crampons",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":137.834076}",
+      "m_WeightKG": 500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 500.0
+    }
+  },
+  {
+    "name": "GEAR_DeerSkinBoots",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_HoursPlayed\":4650.77246,\"m_DroppedIndoors\":true}",
+      "m_WeightKG": 2000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 300.0
+    }
+  },
+  {
+    "name": "GEAR_DeerSkinPants",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":7752.188}",
+      "m_WeightKG": 2000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 350.0
+    }
+  },
+  {
+    "name": "GEAR_DownParka",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_HoursPlayed\":5471.43066,\"m_DroppedIndoors\":true}",
+      "m_WeightKG": 1000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 125.0
+    }
+  },
+  {
+    "name": "GEAR_DownSkiJacket",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_PercentWet\":0.0,\"m_PercentFrozen\":0.0,\"m_HoursPlayed\":17.38593,\"m_HoursRemainingOnCloseFire\":0,\"m_DroppedIndoors\":false}",
+      "m_WeightKG": 1,
+      "m_GearItemSaveVersion": 2,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 150.0
+    }
+  },
+  {
+    "name": "GEAR_DownVest",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":66.83123}",
+      "m_WeightKG": 0.5,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_EarMuffs",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":66.83123}",
+      "m_WeightKG": 0.25,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 75.0
+    }
+  },
+  {
+    "name": "GEAR_FishermanSweater",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":7752.188}",
+      "m_WeightKG": 500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 250.0
+    }
+  },
+  {
+    "name": "GEAR_FleeceMittens",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_PercentWet\":0.0,\"m_PercentFrozen\":0.0,\"m_HoursPlayed\":0.01102319,\"m_HoursRemainingOnCloseFire\":0,\"m_DroppedIndoors\":false}",
+      "m_WeightKG": 0.1,
+      "m_GearItemSaveVersion": 1,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 75.0
+    }
+  },
+  {
+    "name": "GEAR_FleeceSweater",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_PercentWet\":0.0,\"m_PercentFrozen\":0.0,\"m_HoursPlayed\":40.81423,\"m_HoursRemainingOnCloseFire\":0,\"m_DroppedIndoors\":false}",
+      "m_WeightKG": 0.25,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_Gauntlets",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_HoursPlayed\":5067.16455,\"m_DroppedIndoors\":true}",
+      "m_WeightKG": 1000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 200.0
+    }
+  },
+  {
+    "name": "GEAR_GreyMotherBoots",
+    "category": "Clothing",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_HatGatorBalaclavaA",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":7752.188}",
+      "m_WeightKG": 200000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 200.0
+    }
+  },
+  {
+    "name": "GEAR_HatLeatherAviatorA",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_HoursPlayed\":5507.964,\"m_DroppedIndoors\":true}",
+      "m_WeightKG": 300000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 400.0
+    }
+  },
+  {
+    "name": "GEAR_HeavyParka",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_HoursPlayed\":5677.44434,\"m_DroppedIndoors\":true}",
+      "m_WeightKG": 2000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 300.0
+    }
+  },
+  {
+    "name": "GEAR_HeavyWoolSweater",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":137.834076}",
+      "m_WeightKG": 500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 200.0
+    }
+  },
+  {
+    "name": "GEAR_ImprovisedHat",
+    "category": "Clothing",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_ImprovisedMittens",
+    "category": "Clothing",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_InsulatedBoots",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":147.419159}",
+      "m_WeightKG": 1500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 200.0
+    }
+  },
+  {
+    "name": "GEAR_InsulatedPants",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_HoursPlayed\":5507.964,\"m_DroppedIndoors\":true}",
+      "m_WeightKG": 1000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 125.0
+    }
+  },
+  {
+    "name": "GEAR_InsulatedVest",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_PercentWet\":0.0,\"m_HoursPlayed\":1.28222024}",
+      "m_WeightKG": 0.5,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0
+    }
+  },
+  {
+    "name": "GEAR_JacketLeatherFlightA",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_HoursPlayed\":6395.29248,\"m_DroppedIndoors\":true}",
+      "m_WeightKG": 2500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 400.0
+    }
+  },
+  {
+    "name": "GEAR_Jeans",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_PercentWet\":0.0,\"m_HoursPlayed\":1.28222024}",
+      "m_WeightKG": 0.5,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0
+    }
+  },
+  {
+    "name": "GEAR_JeremiahsCoat",
+    "category": "Clothing",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_JerseyHockeyA",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_PercentWet\":0.0,\"m_PercentFrozen\":0.0,\"m_HoursPlayed\":6397.268}",
+      "m_WeightKG": 300000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 300.0
+    }
+  },
+  {
+    "name": "GEAR_LeatherShoes",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_PercentWet\":0.0,\"m_HoursPlayed\":1.28222024}",
+      "m_WeightKG": 0.5,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0
+    }
+  },
+  {
+    "name": "GEAR_LightParka",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":160.896484}",
+      "m_WeightKG": 1250000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 250.0
+    }
+  },
+  {
+    "name": "GEAR_LongUnderwear",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_PercentWet\":0.0,\"m_HoursPlayed\":1.28222024}",
+      "m_WeightKG": 0.25,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 50.0
+    }
+  },
+  {
+    "name": "GEAR_LongUnderwearStart",
+    "category": "Clothing",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_LongUnderwearWool",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":7752.188}",
+      "m_WeightKG": 500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_MackinawJacket",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":129.796249}",
+      "m_WeightKG": 1500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 300.0
+    }
+  },
+  {
+    "name": "GEAR_MilitaryParka",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_PercentWet\":0.0,\"m_PercentFrozen\":0.0,\"m_HoursPlayed\":344.6433,\"m_HoursRemainingOnCloseFire\":0,\"m_DroppedIndoors\":false}",
+      "m_WeightKG": 2,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":false}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 350.0
+    }
+  },
+  {
+    "name": "GEAR_MinersBoots",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_HoursPlayed\":4835.43262}",
+      "m_WeightKG": 2000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 400.0
+    }
+  },
+  {
+    "name": "GEAR_MinersHelmet",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_HoursPlayed\":4835.43262,\"m_DroppedIndoors\":true}",
+      "m_WeightKG": 400000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 350.0
+    }
+  },
+  {
+    "name": "GEAR_MinersJacket",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_HoursPlayed\":4835.43262,\"m_DroppedIndoors\":true}",
+      "m_WeightKG": 2000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 350.0
+    }
+  },
+  {
+    "name": "GEAR_MinersPants",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_HoursPlayed\":4835.43262}",
+      "m_WeightKG": 1000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 200.0
+    }
+  },
+  {
+    "name": "GEAR_Mittens",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_HoursPlayed\":66.83123}",
+      "m_WeightKG": 0.1,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_MooseHideBag",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":7752.188}",
+      "m_WeightKG": 250000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 500.0
+    }
+  },
+  {
+    "name": "GEAR_MooseHideCloak",
+    "category": "Clothing",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_MuklukBoots",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":7752.188}",
+      "m_WeightKG": 1500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 250.0
+    }
+  },
+  {
+    "name": "GEAR_PlaidShirt",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_PercentWet\":0.0,\"m_PercentFrozen\":0.0,\"m_HoursPlayed\":40.81423,\"m_HoursRemainingOnCloseFire\":0,\"m_DroppedIndoors\":false}",
+      "m_WeightKG": 0.25,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_PremiumWinterCoat",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_HoursPlayed\":5057.28125,\"m_DroppedIndoors\":true}",
+      "m_WeightKG": 1500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 400.0
+    }
+  },
+  {
+    "name": "GEAR_QualityWinterCoat",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_HoursPlayed\":6395.29248,\"m_DroppedIndoors\":true}",
+      "m_WeightKG": 2000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 350.0
+    }
+  },
+  {
+    "name": "GEAR_RabbitskinHat",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_HoursPlayed\":6395.29248,\"m_DroppedIndoors\":true}",
+      "m_WeightKG": 350000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 150.0
+    }
+  },
+  {
+    "name": "GEAR_RabbitSkinMittens",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":7752.188}",
+      "m_WeightKG": 1000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 200.0
+    }
+  },
+  {
+    "name": "GEAR_RifleScabbardA",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_HoursPlayed\":5067.16455,\"m_DroppedIndoors\":true}",
+      "m_WeightKG": 250000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 500.0
+    }
+  },
+  {
+    "name": "GEAR_SkiBoots",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_PercentWet\":0.0,\"m_PercentFrozen\":0.0,\"m_HoursPlayed\":5077.8}",
+      "m_WeightKG": 4000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 500.0
+    }
+  },
+  {
+    "name": "GEAR_SkiGloves",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_PercentWet\":0.0,\"m_PercentFrozen\":0.0,\"m_HoursPlayed\":344.6433,\"m_HoursRemainingOnCloseFire\":0,\"m_DroppedIndoors\":false}",
+      "m_WeightKG": 0.5,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":false}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 150.0
+    }
+  },
+  {
+    "name": "GEAR_SkiJacket",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_PercentWet\":0.0,\"m_PercentFrozen\":0.0,\"m_HoursPlayed\":6397.268}",
+      "m_WeightKG": 1000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0
+    }
+  },
+  {
+    "name": "GEAR_SweaterChristmasA",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_HoursPlayed\":4911.362}",
+      "m_WeightKG": 300000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 300.0
+    }
+  },
+  {
+    "name": "GEAR_TacticalGloves",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":137.834076}",
+      "m_WeightKG": 750000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 250.0
+    }
+  },
+  {
+    "name": "GEAR_TacticalJacket",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":137.834076}",
+      "m_WeightKG": 2000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 350.0
+    }
+  },
+  {
+    "name": "GEAR_TechnicalBalaclava",
+    "category": "Clothing",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_TeeShirt",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":66.83123}",
+      "m_WeightKG": 0.25,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 50.0
+    }
+  },
+  {
+    "name": "GEAR_ToolBelt",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_HoursPlayed\":6395.29248,\"m_DroppedIndoors\":true}",
+      "m_WeightKG": 200000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 300.0
+    }
+  },
+  {
+    "name": "GEAR_Toque",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":66.83123}",
+      "m_WeightKG": 0.25,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 75.0
+    }
+  },
+  {
+    "name": "GEAR_WillBoots",
+    "category": "Clothing",
+    "source": "other-modes",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":117.914032}",
+      "m_WeightKG": 1000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 150.0
+    }
+  },
+  {
+    "name": "GEAR_WillBootsStart",
+    "category": "Clothing",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_WillPants",
+    "category": "Clothing",
+    "source": "other-modes",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":117.914032}",
+      "m_WeightKG": 500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_WillPantsStart",
+    "category": "Clothing",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_WillParka",
+    "category": "Clothing",
+    "source": "other-modes",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":117.914032}",
+      "m_WeightKG": 1250000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 250.0
+    }
+  },
+  {
+    "name": "GEAR_WillParka_Table",
+    "category": "Clothing",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_WillParka_Tossed",
+    "category": "Clothing",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_WillShirt",
+    "category": "Clothing",
+    "source": "other-modes",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":117.914032}",
+      "m_WeightKG": 250000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_WillShirtStart",
+    "category": "Clothing",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_WillSweater",
+    "category": "Clothing",
+    "source": "other-modes",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":117.914032}",
+      "m_WeightKG": 250000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_WillSweaterStart",
+    "category": "Clothing",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_WillToque",
+    "category": "Clothing",
+    "source": "other-modes",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":117.914032}",
+      "m_WeightKG": 150000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_WolfSkinCape",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":7752.188}",
+      "m_WeightKG": 3000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 500.0
+    }
+  },
+  {
+    "name": "GEAR_WolfSkinPant",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":7752.188}",
+      "m_WeightKG": 2500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 500.0
+    }
+  },
+  {
+    "name": "GEAR_WoolShirt",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":129.796249}",
+      "m_WeightKG": 250000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 150.0
+    }
+  },
+  {
+    "name": "GEAR_WoolSocks",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":66.83123}",
+      "m_WeightKG": 0.25,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 75.0
+    }
+  },
+  {
+    "name": "GEAR_WoolSweater",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_PercentWet\":0.0,\"m_PercentFrozen\":0.0,\"m_HoursPlayed\":0.01102319,\"m_HoursRemainingOnCloseFire\":0,\"m_DroppedIndoors\":false}",
+      "m_WeightKG": 0.25,
+      "m_GearItemSaveVersion": 1,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 150.0
+    }
+  },
+  {
+    "name": "GEAR_WoolWrap",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":137.834076}",
+      "m_WeightKG": 250000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 150.0
+    }
+  },
+  {
+    "name": "GEAR_WoolWrapCap",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_HoursPlayed\":4933.592,\"m_DroppedIndoors\":true}",
+      "m_WeightKG": 250000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 80.0
+    }
+  },
+  {
+    "name": "GEAR_WorkBoots",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_PercentWet\":0.0,\"m_PercentFrozen\":0.0,\"m_HoursPlayed\":23.47616,\"m_HoursRemainingOnCloseFire\":0,\"m_DroppedIndoors\":false}",
+      "m_WeightKG": 1.5,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 200.0
+    }
+  },
+  {
+    "name": "GEAR_WorkGloves",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_WearingProxy\":true,\"m_HoursPlayed\":66.83123}",
+      "m_WeightKG": 0.25,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 150.0
+    }
+  },
+  {
+    "name": "GEAR_WorkPants",
+    "category": "Clothing",
+    "source": "survival",
+    "template": {
+      "m_ClothingItemSerialized": "{\"m_HoursPlayed\":6395.29248,\"m_DroppedIndoors\":true}",
+      "m_WeightKG": 1500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 200.0
+    }
+  },
+  {
+    "name": "GEAR_AcornCooked",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":100.0,\"m_CaloriesTotal\":100.0,\"m_HoursPlayed\":6395.29248}",
+      "m_WeightKG": 30000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 35.0
+    }
+  },
+  {
+    "name": "GEAR_AcornCookedBig",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":400.0,\"m_CaloriesTotal\":400.0,\"m_HoursPlayed\":6395.29248}",
+      "m_WeightKG": 120000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 35.0
+    }
+  },
+  {
+    "name": "GEAR_AirlineFoodChick",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":620.0,\"m_CaloriesTotal\":620.0,\"m_HoursPlayed\":5219.612,\"m_Packaged\":true}",
+      "m_WeightKG": 250000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 1800.0
+    }
+  },
+  {
+    "name": "GEAR_AirlineFoodVeg",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":560.0,\"m_CaloriesTotal\":560.0,\"m_HoursPlayed\":5219.612,\"m_Packaged\":true}",
+      "m_WeightKG": 250000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 1800.0
+    }
+  },
+  {
+    "name": "GEAR_AnimalFat",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":900.0,\"m_CaloriesTotal\":900.0,\"m_HoursPlayed\":7752.188}",
+      "m_WeightKG": 1000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 6.0
+    }
+  },
+  {
+    "name": "GEAR_BearQuarter",
+    "category": "FoodAndDrink",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_BeefJerky",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":350.0,\"m_CaloriesTotal\":350.0,\"m_HoursPlayed\":122.810684,\"m_Packaged\":true}",
+      "m_WeightKG": 100000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 1000.0
+    }
+  },
+  {
+    "name": "GEAR_BirchbarkTea",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":125.0,\"m_CaloriesTotal\":125.0,\"m_HoursPlayed\":7752.188,\"m_NumTimesHeatedUp\":1}",
+      "m_WeightKG": 100000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_Broth",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":850.0,\"m_CaloriesTotal\":850.0,\"m_HoursPlayed\":7750.91553,\"m_NumTimesHeatedUp\":1}",
+      "m_WeightKG": 800000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 150.0
+    }
+  },
+  {
+    "name": "GEAR_BurdockPrepared",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":275.0,\"m_CaloriesTotal\":275.0,\"m_HoursPlayed\":6395.29248,\"m_Packaged\":true}",
+      "m_WeightKG": 150000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 1500.0
+    }
+  },
+  {
+    "name": "GEAR_BurdockTea",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":100.0,\"m_CaloriesTotal\":100.0,\"m_HoursPlayed\":7750.91553,\"m_NumTimesHeatedUp\":1}",
+      "m_WeightKG": 100000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_CandyBar",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":250,\"m_CaloriesTotal\":250,\"m_Opened\":false,\"m_HeatPercent\":0,\"m_HoursPlayed\":40.81423,\"m_HarvestedByPlayer\":false,\"m_NumTimesHeatedUp\":0,\"m_Packaged\":true}",
+      "m_WeightKG": 0.1,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 400.0
+    }
+  },
+  {
+    "name": "GEAR_CannedBeans",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":600.0,\"m_CaloriesTotal\":600.0,\"m_HoursPlayed\":1.28222024}",
+      "m_SmashableItemSerialized": "{}",
+      "m_WeightKG": 0.25,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 750.0
+    }
+  },
+  {
+    "name": "GEAR_CannedCorn",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":295.0,\"m_CaloriesTotal\":295.0,\"m_HoursPlayed\":5295.31152}",
+      "m_SmashableItemSerialized": "{}",
+      "m_WeightKG": 300000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 1200.0
+    }
+  },
+  {
+    "name": "GEAR_CannedHam",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":550.0,\"m_CaloriesTotal\":550.0,\"m_HoursPlayed\":5049.749,\"m_Packaged\":true}",
+      "m_WeightKG": 400000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 1500.0
+    }
+  },
+  {
+    "name": "GEAR_CannedSardines",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":300.0,\"m_CaloriesTotal\":300.0,\"m_Opened\":false,\"m_HeatPercent\":0.0,\"m_HoursPlayed\":0.0007002407,\"m_HarvestedByPlayer\":false,\"m_NumTimesHeatedUp\":0,\"m_Packaged\":true}",
+      "m_WeightKG": 0.1,
+      "m_GearItemSaveVersion": 1,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 1500.0
+    }
+  },
+  {
+    "name": "GEAR_Carrot",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":175.0,\"m_CaloriesTotal\":175.0,\"m_HoursPlayed\":5070.176}",
+      "m_WeightKG": 100000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 50.0
+    }
+  },
+  {
+    "name": "GEAR_CattailStalk",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":150,\"m_CaloriesTotal\":150,\"m_Opened\":false,\"m_HeatPercent\":0,\"m_HoursPlayed\":23.47616,\"m_HarvestedByPlayer\":false,\"m_NumTimesHeatedUp\":0,\"m_Packaged\":false}",
+      "m_WeightKG": 0.05,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 35.0
+    }
+  },
+  {
+    "name": "GEAR_CoffeeCup",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":100.0,\"m_CaloriesTotal\":100.0,\"m_HoursPlayed\":122.810684}",
+      "m_WeightKG": 100000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_CondensedMilk",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":750,\"m_CaloriesTotal\":750,\"m_Opened\":false,\"m_HeatPercent\":0,\"m_HoursPlayed\":344.6433,\"m_HarvestedByPlayer\":false,\"m_NumTimesHeatedUp\":0,\"m_Packaged\":false}",
+      "m_SmashableItemSerialized": "{\"m_HasBeenSmashed\":false}",
+      "m_WeightKG": 0.25,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":false}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_CookedBigMouthBass_TallTales",
+    "category": "FoodAndDrink",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_CookedCohoSalmon",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":1342.176,\"m_CaloriesTotal\":1342.176,\"m_HoursPlayed\":6397.268}",
+      "m_WeightKG": 2953082624,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 32.0
+    }
+  },
+  {
+    "name": "GEAR_CookedLakeWhiteFish",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":507.325073,\"m_CaloriesTotal\":507.325073,\"m_HoursPlayed\":7752.188}",
+      "m_WeightKG": 1322881536,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 32.0
+    }
+  },
+  {
+    "name": "GEAR_CookedMeatBear",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":1080.0,\"m_CaloriesTotal\":1080.0,\"m_HoursPlayed\":6397.268}",
+      "m_WeightKG": 1000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 48.0
+    }
+  },
+  {
+    "name": "GEAR_CookedMeatDeer",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":800.0,\"m_CaloriesTotal\":800.0,\"m_HoursPlayed\":65.41083}",
+      "m_WeightKG": 1.0,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 10.0
+    }
+  },
+  {
+    "name": "GEAR_CookedMeatMoose",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":900.0,\"m_CaloriesTotal\":900.0,\"m_HoursPlayed\":65.41083}",
+      "m_WeightKG": 1.0,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 12.0
+    }
+  },
+  {
+    "name": "GEAR_CookedMeatPtarmigan",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":540.0,\"m_CaloriesTotal\":540.0,\"m_HoursPlayed\":5077.8}",
+      "m_WeightKG": 1000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 32.0
+    }
+  },
+  {
+    "name": "GEAR_CookedMeatRabbit",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":450.0,\"m_CaloriesTotal\":450.0,\"m_HoursPlayed\":66.83123}",
+      "m_WeightKG": 1.0,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 8.0
+    }
+  },
+  {
+    "name": "GEAR_CookedMeatWolf",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":875.0,\"m_CaloriesTotal\":875.0,\"m_HoursPlayed\":6397.268}",
+      "m_WeightKG": 1000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 40.0
+    }
+  },
+  {
+    "name": "GEAR_CookedRainbowTrout",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":238.880447,\"m_CaloriesTotal\":238.880447,\"m_HoursPlayed\":6397.268}",
+      "m_WeightKG": 622895552,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 32.0
+    }
+  },
+  {
+    "name": "GEAR_CookedRockfish",
+    "category": "FoodAndDrink",
+    "source": "other-modes",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":314.543427,\"m_CaloriesTotal\":314.543427,\"m_HoursPlayed\":112.694443}",
+      "m_WeightKG": 698985408,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 32.0
+    }
+  },
+  {
+    "name": "GEAR_CookedSmallMouthBass",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":1430.07813,\"m_CaloriesTotal\":1430.07813,\"m_HoursPlayed\":7752.188}",
+      "m_WeightKG": 3146486528,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 32.0
+    }
+  },
+  {
+    "name": "GEAR_Crackers",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":600.0,\"m_CaloriesTotal\":600.0,\"m_HoursPlayed\":1.28222024}",
+      "m_WeightKG": 0.1,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 25.0
+    }
+  },
+  {
+    "name": "GEAR_CuredMeat",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":900.0,\"m_CaloriesTotal\":900.0,\"m_HoursPlayed\":6395.29248}",
+      "m_WeightKG": 250000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 1000.0
+    }
+  },
+  {
+    "name": "GEAR_DogFood",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":500.0,\"m_CaloriesTotal\":500.0,\"m_HoursPlayed\":7752.188}",
+      "m_SmashableItemSerialized": "{}",
+      "m_WeightKG": 300000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 300.0
+    }
+  },
+  {
+    "name": "GEAR_EnergyBar",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":500,\"m_CaloriesTotal\":500,\"m_Opened\":false,\"m_HeatPercent\":0,\"m_HoursPlayed\":23.47616,\"m_HarvestedByPlayer\":false,\"m_NumTimesHeatedUp\":0,\"m_Packaged\":true}",
+      "m_WeightKG": 0.1,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 120.0
+    }
+  },
+  {
+    "name": "GEAR_Flour",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_PowderItemSerialized": "{\"m_WeightKG\":1500000000}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 400.0
+    }
+  },
+  {
+    "name": "GEAR_GranolaBar",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":300.0,\"m_CaloriesTotal\":300.0,\"m_Opened\":false,\"m_HeatPercent\":0.0,\"m_HoursPlayed\":0.0007002407,\"m_HarvestedByPlayer\":false,\"m_NumTimesHeatedUp\":0,\"m_Packaged\":true}",
+      "m_WeightKG": 0.1,
+      "m_GearItemSaveVersion": 1,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 300.0
+    }
+  },
+  {
+    "name": "GEAR_GreenTeaCup",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":100,\"m_CaloriesTotal\":100,\"m_Opened\":false,\"m_HeatPercent\":0,\"m_HoursPlayed\":17.38593,\"m_HarvestedByPlayer\":false,\"m_NumTimesHeatedUp\":0,\"m_Packaged\":false}",
+      "m_WeightKG": 0.1,
+      "m_GearItemSaveVersion": 2,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_GreenTeaPackage",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 0.05,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 1500.0
+    }
+  },
+  {
+    "name": "GEAR_HomeMadeSoup",
+    "category": "FoodAndDrink",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_KetchupChips",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":300.0,\"m_CaloriesTotal\":300.0,\"m_HoursPlayed\":1.28222024,\"m_Packaged\":true}",
+      "m_WeightKG": 0.1,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 400.0
+    }
+  },
+  {
+    "name": "GEAR_MapleSyrup",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":850.0,\"m_CaloriesTotal\":850.0,\"m_HoursPlayed\":6397.268}",
+      "m_WeightKG": 300000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0
+    }
+  },
+  {
+    "name": "GEAR_MooseQuarter",
+    "category": "FoodAndDrink",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_MRE",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":1750.0,\"m_CaloriesTotal\":1750.0,\"m_HoursPlayed\":66.83123}",
+      "m_WeightKG": 0.5,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 1800.0
+    }
+  },
+  {
+    "name": "GEAR_OatsTin",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_PowderItemSerialized": "{\"m_WeightKG\":500000000}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 500.0
+    }
+  },
+  {
+    "name": "GEAR_PeanutButter",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":900.0,\"m_CaloriesTotal\":900.0,\"m_HoursPlayed\":137.834076}",
+      "m_WeightKG": 500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_PinnacleCanPeaches",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":450,\"m_CaloriesTotal\":450,\"m_Opened\":false,\"m_HeatPercent\":0,\"m_HoursPlayed\":17.38593,\"m_HarvestedByPlayer\":false,\"m_NumTimesHeatedUp\":0,\"m_Packaged\":false}",
+      "m_SmashableItemSerialized": "{\"m_HasBeenSmashed\":false}",
+      "m_WeightKG": 0.5,
+      "m_GearItemSaveVersion": 2,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 300.0
+    }
+  },
+  {
+    "name": "GEAR_Potato",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 200000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 200.0
+    }
+  },
+  {
+    "name": "GEAR_PtarmiganCarcass",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 3000000000,
+      "m_BodyHarvestSerialized": "{\"m_HideAvailableUnits\":4,\"m_Frozen\":true,\"m_Condition\":91.73566,\"m_RolledSpawnChance\":true,\"m_AllowDecay\":true,\"m_HoursPlayed\":4835.43262,\"m_PercentFrozen\":100.0,\"m_HasHarvested\":true,\"m_QuarterBagWasteMultiplier\":1.5}",
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 10.0
+    }
+  },
+  {
+    "name": "GEAR_PumpkinPie",
+    "category": "FoodAndDrink",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_PumpkinPieDarkwalker",
+    "category": "FoodAndDrink",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_RabbitCarcass",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 3.0,
+      "m_BodyHarvestSerialized": "{\"m_MeatAvailableKG\":1.2415421,\"m_HideAvailableUnits\":1,\"m_GutAvailableUnits\":1,\"m_Condition\":98.5730057,\"m_RolledSpawnChance\":true,\"m_AllowDecay\":true,\"m_HoursPlayed\":66.83123,\"m_QuarterBagWasteMultiplier\":1.0}",
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 10.0
+    }
+  },
+  {
+    "name": "GEAR_RawBigBass",
+    "category": "FoodAndDrink",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_RawBigMouthBass_TallTales",
+    "category": "FoodAndDrink",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_RawBurbot",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":1749.88135,\"m_CaloriesTotal\":1749.88135,\"m_HoursPlayed\":4619.849}",
+      "m_WeightKG": 5384250368,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 12.0
+    }
+  },
+  {
+    "name": "GEAR_RawCohoSalmon",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":1741.31323,\"m_CaloriesTotal\":1741.31323,\"m_HoursPlayed\":6397.268}",
+      "m_WeightKG": 5804377600,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 12.0
+    }
+  },
+  {
+    "name": "GEAR_RawLakeWhiteFish",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":672.501648,\"m_CaloriesTotal\":672.501648,\"m_HoursPlayed\":7752.188}",
+      "m_WeightKG": 2690006528,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 12.0
+    }
+  },
+  {
+    "name": "GEAR_RawMeatBear",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":900.0,\"m_CaloriesTotal\":900.0,\"m_HoursPlayed\":6397.268}",
+      "m_WeightKG": 1000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 16.0
+    }
+  },
+  {
+    "name": "GEAR_RawMeatCougar",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":850.0,\"m_CaloriesTotal\":850.0,\"m_HoursPlayed\":3847.68726}",
+      "m_WeightKG": 1000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 20.0
+    }
+  },
+  {
+    "name": "GEAR_RawMeatDeer",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":900.0,\"m_CaloriesTotal\":900.0,\"m_HoursPlayed\":1491.225}",
+      "m_WeightKG": 1000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 20.0
+    }
+  },
+  {
+    "name": "GEAR_RawMeatMoose",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":900.0,\"m_CaloriesTotal\":900.0,\"m_HoursPlayed\":7752.188}",
+      "m_WeightKG": 1000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 20.0
+    }
+  },
+  {
+    "name": "GEAR_RawMeatPtarmigan",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":500.0,\"m_CaloriesTotal\":500.0,\"m_HoursPlayed\":6397.268}",
+      "m_WeightKG": 1000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 12.0
+    }
+  },
+  {
+    "name": "GEAR_RawMeatRabbit",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":500.0,\"m_CaloriesTotal\":500.0,\"m_HoursPlayed\":7752.188}",
+      "m_WeightKG": 1000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 12.0
+    }
+  },
+  {
+    "name": "GEAR_RawMeatWolf",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":800.0,\"m_CaloriesTotal\":800.0,\"m_HoursPlayed\":66.83123}",
+      "m_WeightKG": 1.0,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 3.0
+    }
+  },
+  {
+    "name": "GEAR_RawRainbowTrout",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":183.426666,\"m_CaloriesTotal\":183.426666,\"m_HoursPlayed\":4696.27637}",
+      "m_WeightKG": 733706688,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0
+    }
+  },
+  {
+    "name": "GEAR_RawRedIrishLord",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":663.8255,\"m_CaloriesTotal\":663.8255,\"m_HoursPlayed\":6397.268}",
+      "m_WeightKG": 2212751616,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0
+    }
+  },
+  {
+    "name": "GEAR_RawRockfish",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":546.4521,\"m_CaloriesTotal\":546.4521,\"m_HoursPlayed\":6397.268}",
+      "m_WeightKG": 1821506944,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0
+    }
+  },
+  {
+    "name": "GEAR_RawSmallMouthBass",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":633.3044,\"m_CaloriesTotal\":633.3044,\"m_HoursPlayed\":6397.268}",
+      "m_WeightKG": 2111014592,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0
+    }
+  },
+  {
+    "name": "GEAR_ReishiTea",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":120.000008,\"m_CaloriesTotal\":120.000008,\"m_HoursPlayed\":5219.612,\"m_NumTimesHeatedUp\":1}",
+      "m_WeightKG": 100000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_RoseHipTea",
+    "category": "FoodAndDrink",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_Salt",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_PowderItemSerialized": "{\"m_WeightKG\":250000000}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 2000.0
+    }
+  },
+  {
+    "name": "GEAR_SaltBag",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_PowderItemSerialized": "{\"m_WeightKG\":10000000000}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 2000.0
+    }
+  },
+  {
+    "name": "GEAR_Soda",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":250.0,\"m_CaloriesTotal\":250.0,\"m_HoursPlayed\":1.28222024,\"m_Packaged\":true}",
+      "m_WeightKG": 0.25,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 600.0
+    }
+  },
+  {
+    "name": "GEAR_SodaEnergy",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":100.0,\"m_CaloriesTotal\":100.0,\"m_HoursPlayed\":1.28222024,\"m_Packaged\":true}",
+      "m_WeightKG": 0.25,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 600.0
+    }
+  },
+  {
+    "name": "GEAR_SodaGrape",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":250.0,\"m_CaloriesTotal\":250.0,\"m_HoursPlayed\":66.83123,\"m_Packaged\":true}",
+      "m_WeightKG": 0.25,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 600.0
+    }
+  },
+  {
+    "name": "GEAR_SodaOrange",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":250,\"m_CaloriesTotal\":250,\"m_Opened\":false,\"m_HeatPercent\":0,\"m_HoursPlayed\":0.01102319,\"m_HarvestedByPlayer\":false,\"m_NumTimesHeatedUp\":0,\"m_Packaged\":true}",
+      "m_WeightKG": 0.25,
+      "m_GearItemSaveVersion": 1,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 600.0
+    }
+  },
+  {
+    "name": "GEAR_StagQuarter",
+    "category": "FoodAndDrink",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_TimberwolfQuarter",
+    "category": "FoodAndDrink",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_TomatoSoupCan",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_FoodItemSerialized": "{\"m_CaloriesRemainingProxy\":300,\"m_CaloriesTotal\":300,\"m_Opened\":false,\"m_HeatPercent\":0,\"m_HoursPlayed\":40.81423,\"m_HarvestedByPlayer\":false,\"m_NumTimesHeatedUp\":0,\"m_Packaged\":false}",
+      "m_SmashableItemSerialized": "{\"m_HasBeenSmashed\":false}",
+      "m_WeightKG": 0.25,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 500.0
+    }
+  },
+  {
+    "name": "GEAR_Water1000ml",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_LiquidItemSerialized": "{\"m_LiquidLitersProxy\":1000000000}",
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_Water500ml",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_LiquidItemSerialized": "{\"m_LiquidLitersProxy\":500000000}",
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_WaterSupplyNotPotable",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_WaterSupplySerialized": "{}",
+      "m_GearItemSaveVersion": 4,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_WaterSupplyPotable",
+    "category": "FoodAndDrink",
+    "source": "survival",
+    "template": {
+      "m_WaterSupplySerialized": "{\"m_VolumeProxy\":0.988575459}",
+      "m_GearItemSaveVersion": 4,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_WolfQuarter",
+    "category": "FoodAndDrink",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_Arrow",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 150000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_ArrowHardened",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 100000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 50.0
+    }
+  },
+  {
+    "name": "GEAR_BearSkinBedRoll",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_BedSerialized": "{\"m_Guid\":\"ba5643c2-0686-45f5-bda6-05f648800abf\"}",
+      "m_WeightKG": 3000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 365.0
+    }
+  },
+  {
+    "name": "GEAR_BedRoll",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_BedSerialized": "{}",
+      "m_WeightKG": 1.0,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 250.0
+    }
+  },
+  {
+    "name": "GEAR_BedRoll_Down",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_BedSerialized": "{\"m_BedRollState\":\"Placed\"}",
+      "m_WeightKG": 1100000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 250.0
+    }
+  },
+  {
+    "name": "GEAR_BlueFlare",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_FlareItemSerialized": "{\"m_HoursPlayed\":122.810684}",
+      "m_WeightKG": 250000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_BoltCutters",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_BookArchery",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_ResearchItemSerialized": "{\"m_ElapsedHours\":5.0}",
+      "m_WeightKG": 500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_BookCarcassHarvesting",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_ResearchItemSerialized": "{}",
+      "m_WeightKG": 0.5,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_BookCooking",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_ResearchItemSerialized": "{}",
+      "m_WeightKG": 500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_BookFireStarting",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_ResearchItemSerialized": "{\"m_ElapsedHours\":2}",
+      "m_WeightKG": 0.5,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_BookGunsmithing",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_ResearchItemSerialized": "{\"m_ElapsedHours\":5.0}",
+      "m_WeightKG": 500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_BookIceFishing",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_ResearchItemSerialized": "{\"m_ElapsedHours\":0}",
+      "m_WeightKG": 0.5,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_BookMending",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_ResearchItemSerialized": "{\"m_ElapsedHours\":0}",
+      "m_WeightKG": 0.5,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_BookRevolverFirearm",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_ResearchItemSerialized": "{}",
+      "m_WeightKG": 500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_BookRifleFirearm",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_ResearchItemSerialized": "{\"m_ElapsedHours\":0}",
+      "m_WeightKG": 0.5,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_BookRifleFirearmAdvanced",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_ResearchItemSerialized": "{\"m_ElapsedHours\":8.0}",
+      "m_WeightKG": 0.5,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_Bow",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_BowItemSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_Bow_Bushcraft",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_BowItemSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 125.0
+    }
+  },
+  {
+    "name": "GEAR_Bow_Manufactured",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 350000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_BowItemSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_Bow_Woodwrights",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 0.75,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_BrokenArrow",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 150000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 1.0
+    }
+  },
+  {
+    "name": "GEAR_BrokenArrowHardened",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 150000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 1.0
+    }
+  },
+  {
+    "name": "GEAR_BrokenRifle",
+    "category": "Tools",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_Camera",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeaponItemSerialized": "{\"m_Clip\":[100,100,100,100],\"m_SelectedAmmoIndex\":1}",
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 150.0
+    }
+  },
+  {
+    "name": "GEAR_Canister",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 200000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 60.0
+    }
+  },
+  {
+    "name": "GEAR_CanOpener",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 0.25,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":false}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 50.0
+    }
+  },
+  {
+    "name": "GEAR_CarBattery",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 15.0,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_CookingOil",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_LiquidItemSerialized": "{\"m_LiquidLitersProxy\":750000000,\"m_LiquidQuality\":\"NonPotable\"}",
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 800.0
+    }
+  },
+  {
+    "name": "GEAR_CookingPot",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 1000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_CookingPotItemSerialized": "{\"m_FireBeingUsedGUID\":\"\",\"m_GearItemBeingCookedGUID\":\"\",\"m_CookingElapsedHours\":0.904296637,\"m_HoursPlayedWhenSerialized\":122.810684}",
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 50.0
+    }
+  },
+  {
+    "name": "GEAR_CougarClawKnife",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 600000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_MillableSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_FireAxe",
+    "category": "Tools",
+    "source": "other-modes",
+    "template": {
+      "m_WeightKG": 0.0,
+      "m_GearItemSaveVersion": 0,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 0.0
+    }
+  },
+  {
+    "name": "GEAR_FishingLine",
+    "category": "Tools",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_FishingLureA",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 10000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_FishingLureB",
+    "category": "Tools",
+    "source": "other-modes",
+    "template": {
+      "m_WeightKG": 10000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_FishingLureD",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 10000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_FixedRifle",
+    "category": "Tools",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_FlareA",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_FlareItemSerialized": "{\"m_HoursPlayed\":66.83123,\"m_StateProxy\":\"BurnedOut\",\"m_ElapsedBurnMinutesProxy\":60.280407}",
+      "m_WeightKG": 0.25,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0
+    }
+  },
+  {
+    "name": "GEAR_FlareGun",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeaponItemSerialized": "{\"m_Clip\":[]}",
+      "m_WeightKG": 400000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 25.0
+    }
+  },
+  {
+    "name": "GEAR_FlareGunAmmoSingle",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 50000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 1500.0
+    }
+  },
+  {
+    "name": "GEAR_FlareGunAmmoSingle_SurvivorMission",
+    "category": "Tools",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_Flashlight",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_FlashlightItemSerialized": "{\"m_CurrentBatteryCharge\":1.0}",
+      "m_WeightKG": 1000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_Flashlight_LongLasting",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_FlashlightItemSerialized": "{\"m_CurrentBatteryCharge\":1.0}",
+      "m_WeightKG": 1250000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_Hacksaw",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 1,
+      "m_GearItemSaveVersion": 2,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_Hammer",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 2000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 150.0
+    }
+  },
+  {
+    "name": "GEAR_HandheldShortwave",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_HandheldshortwaveSerialized": {
+        "m_TrackingModeName": "Cache"
+      },
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_Hatchet",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 1.5,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_MillableSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_HatchetImprovised",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 1750000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_MillableSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_HighQualityTools",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 0.75,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_HookAndLine",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 20000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_InsulatedFlask_A",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 200000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_InsulatedFlaskSerialized": {
+        "m_SerializedItems": []
+      },
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 500.0
+    }
+  },
+  {
+    "name": "GEAR_InsulatedFlask_B",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 200000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_InsulatedFlaskSerialized": {
+        "m_SerializedItems": []
+      },
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 500.0
+    }
+  },
+  {
+    "name": "GEAR_InsulatedFlask_C",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 200000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_InsulatedFlaskSerialized": {
+        "m_SerializedItems": []
+      },
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 500.0
+    }
+  },
+  {
+    "name": "GEAR_InsulatedFlask_D",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 200000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_InsulatedFlaskSerialized": {
+        "m_SerializedItems": []
+      },
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 500.0
+    }
+  },
+  {
+    "name": "GEAR_InsulatedFlask_E",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 200000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_InsulatedFlaskSerialized": {
+        "m_SerializedItems": []
+      },
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 500.0
+    }
+  },
+  {
+    "name": "GEAR_InsulatedFlask_F",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 200000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_InsulatedFlaskSerialized": {
+        "m_SerializedItems": []
+      },
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 500.0
+    }
+  },
+  {
+    "name": "GEAR_InsulatedFlask_G",
+    "category": "Tools",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_JeremiahKnife",
+    "category": "Tools",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_JerrycanRusty",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_LiquidItemSerialized": "{\"m_LiquidLitersProxy\":3018049024,\"m_LiquidQuality\":\"NonPotable\"}",
+      "m_WeightKG": 100000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_KeroseneLampB",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_KeroseneLampItemSerialized": "{\"m_HoursPlayed\":40.81423,\"m_CurrentFuelLitersProxy\":0.130225,\"m_OnProxy\":false}",
+      "m_WeightKG": 1,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_KeroseneLamp_Spelunkers",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_KeroseneLampItemSerialized": "{\"m_HoursPlayed\":7752.188,\"m_CurrentFuelLitersProxy\":960763188}",
+      "m_WeightKG": 1000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_Knife",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 0.5,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_MillableSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_KnifeImprovised",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 750000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_MillableSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_LampFuel",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_LiquidItemSerialized": "{\"m_LiquidLitersProxy\":0.3297109,\"m_LiquidQuality\":\"NonPotable\"}",
+      "m_WeightKG": 0.1,
+      "m_GearItemSaveVersion": 2,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_LampFuelFull",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_LiquidItemSerialized": "{\"m_LiquidLitersProxy\":500000000,\"m_LiquidQuality\":\"NonPotable\"}",
+      "m_WeightKG": 100000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_NoiseMaker",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 200000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 20.0
+    }
+  },
+  {
+    "name": "GEAR_Prybar",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 1,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 125.0
+    }
+  },
+  {
+    "name": "GEAR_RecycledCan",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 0.15,
+      "m_GearItemSaveVersion": 4,
+      "m_CookingPotItemSerialized": "{\"m_FireBeingUsedGUID\":\"\",\"m_GearItemBeingCookedGUID\":\"\",\"m_HoursPlayedWhenSerialized\":1.28222024}",
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 50.0
+    }
+  },
+  {
+    "name": "GEAR_Respirator",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_RespiratorSerialized": {
+        "AttachedCanister": {
+          "m_HoursPlayed": 7750.91553,
+          "m_Position": [
+            968.2806,
+            38.9081955,
+            847.765747
+          ],
+          "m_Rotation": [
+            0.00113203,
+            0.9854823,
+            0.101206958,
+            0.136310756
+          ],
+          "m_InstanceIDProxy": -11357934,
+          "m_CurrentHPProxy": 32.9452553,
+          "m_NormalizedCondition": 0.5490876,
+          "m_BeenInPlayerInventoryProxy": true,
+          "m_BeenInContainerProxy": true,
+          "m_BeenInspectedProxy": true,
+          "m_ItemLootedProxy": true,
+          "m_HasBeenOwnedByPlayer": true,
+          "m_WeightKG": 200000000,
+          "m_GearItemSaveVersion": 5,
+          "m_InspectSerialized": "{}"
+        }
+      },
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 75.0
+    }
+  },
+  {
+    "name": "GEAR_Revolver",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeaponItemSerialized": "{\"m_RoundsInClipProxy\":0,\"m_IsJammed\":false,\"m_Clip\":[100,100,100,100,100,100],\"m_SpentCasingsInClip\":0}",
+      "m_WeightKG": 1.5,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":false}",
+      "m_MillableSerialized": "{\"m_RestorationProgress\":0}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_RevolverAmmoBox",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 0.1,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_RevolverAmmoCasing",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 5000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_RevolverAmmoSingle",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 0.01,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_RevolverFancy",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeaponItemSerialized": "{\"m_Clip\":[100,100,100,100],\"m_SpentCasingsInClip\":2}",
+      "m_WeightKG": 1750000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_MillableSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_RevolverGreen",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeaponItemSerialized": "{\"m_Clip\":[100,100,100,100],\"m_SpentCasingsInClip\":2}",
+      "m_WeightKG": 1500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_MillableSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_RevolverStubNosed",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeaponItemSerialized": "{\"m_Clip\":[]}",
+      "m_WeightKG": 1250000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_MillableSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_Rifle",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeaponItemSerialized": "{\"m_RoundsInClipProxy\":0,\"m_IsJammed\":false}",
+      "m_WeightKG": 4,
+      "m_GearItemSaveVersion": 2,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 150.0
+    }
+  },
+  {
+    "name": "GEAR_RifleAmmoBox",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 0.1,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_RifleAmmoCasing",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 10000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_RifleAmmoSingle",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 0.02,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_RifleCleaningKit",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 0.1,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_RifleHuntingLodge",
+    "category": "Tools",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_Rifle_Barbs",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeaponItemSerialized": "{\"m_Clip\":[100,100,100,100,100,100,100,100,100,100]}",
+      "m_WeightKG": 4500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_MillableSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 175.0
+    }
+  },
+  {
+    "name": "GEAR_Rifle_Curators",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeaponItemSerialized": "{\"m_Clip\":[100,100,100,100,100,100,100,100,100]}",
+      "m_WeightKG": 4000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_MillableSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 150.0
+    }
+  },
+  {
+    "name": "GEAR_Rifle_Trader",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeaponItemSerialized": "{\"m_Clip\":[]}",
+      "m_WeightKG": 1500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_MillableSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_Rifle_Vaughns",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeaponItemSerialized": "{\"m_Clip\":[100,100,100]}",
+      "m_WeightKG": 3000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_MillableSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_Rope",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 5.0,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_SewingKit",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 0.1,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_SharpeningStone",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 0.1,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_Shotgun",
+    "category": "Tools",
+    "source": "other-modes",
+    "template": {
+      "m_WeaponItemSerialized": "{\"m_Clip\":[100]}",
+      "m_WeightKG": 4000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_MillableSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 500.0
+    }
+  },
+  {
+    "name": "GEAR_ShotgunAmmoBox",
+    "category": "Tools",
+    "source": "other-modes",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 100000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_ShotgunAmmoCasing",
+    "category": "Tools",
+    "source": "other-modes",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 10000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_ShotgunAmmoSingle",
+    "category": "Tools",
+    "source": "other-modes",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 20000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_Shovel",
+    "category": "Tools",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_SimpleTools",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 1000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 60.0
+    }
+  },
+  {
+    "name": "GEAR_Skillet",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 1000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_CookingPotItemSerialized": "{\"m_FireBeingUsedGUID\":\"\",\"m_GearItemBeingCookedGUID\":\"\",\"m_GracePeriodElapsedHours\":58.35914,\"m_HoursPlayedWhenSerialized\":6397.268}",
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 50.0
+    }
+  },
+  {
+    "name": "GEAR_Snare",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_SnareItemSerialized": "{\"m_HoursPlayed\":66.83123,\"m_HoursAtLastRoll\":60.0}",
+      "m_WeightKG": 0.3,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_SprayPaintCan",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 200000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_SprayPaintCanSerialized": "{\"m_Colour\":\"Orange\"}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_SprayPaintCanGlyphA",
+    "category": "Tools",
+    "source": "other-modes",
+    "template": {
+      "m_WeightKG": 200000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_SprayPaintCanSerialized": "{\"m_Colour\":\"Green\"}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_StumpRemover",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 750000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_TechnicalBackpack",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_TipUp",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 300000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 96.0
+    }
+  },
+  {
+    "name": "GEAR_Torch",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_TorchItemSerialized": "{\"m_HoursPlayed\":40.81423,\"m_StateProxy\":\"Fresh\",\"m_ElapsedBurnMinutesProxy\":0}",
+      "m_WeightKG": 0.3,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_Travois",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 1000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 400.0
+    }
+  },
+  {
+    "name": "GEAR_Vice",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 2000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_WoodworkingTools",
+    "category": "Tools",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 1500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 500.0
+    }
+  },
+  {
+    "name": "GEAR_Acorn",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 50000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_AcornGrounds",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 200000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_AcornShelled",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 50000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_AcornShelledBig",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 250000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_ArrowHead",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 70000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 50.0
+    }
+  },
+  {
+    "name": "GEAR_ArrowShaft",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 50000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 35.0
+    }
+  },
+  {
+    "name": "GEAR_BearHide",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_EvolveItemSerialized": "{\"m_HoursPlayed\":3847.68726,\"m_TimeSpentEvolvingGameHours\":244.016281}",
+      "m_WeightKG": 1000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 30.0
+    }
+  },
+  {
+    "name": "GEAR_BearHideDried",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 1000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_BirchSapling",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_EvolveItemSerialized": "{\"m_HoursPlayed\":6395.29248}",
+      "m_WeightKG": 200000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 50.0
+    }
+  },
+  {
+    "name": "GEAR_BirchSaplingDried",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 200000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 50.0
+    }
+  },
+  {
+    "name": "GEAR_Bullet",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 5000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_Burdock",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 150000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 1000.0
+    }
+  },
+  {
+    "name": "GEAR_CashBundle",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 50000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_Cloth",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 0.1,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_ClothSheet",
+    "category": "Materials",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_CoffeeTin",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 0.05,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":false}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 1000.0
+    }
+  },
+  {
+    "name": "GEAR_CougarClaw",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 70000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 50.0
+    }
+  },
+  {
+    "name": "GEAR_CougarHide",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_EvolveItemSerialized": "{\"m_HoursPlayed\":5345.1167,\"m_TimeSpentEvolvingGameHours\":3.24854612}",
+      "m_WeightKG": 750000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 35.0
+    }
+  },
+  {
+    "name": "GEAR_CougarHideDried",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 750000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_CrowFeather",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 0.01,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_DustingSulfur",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 100000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_FilmBoxBW",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 100000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_FilmBoxColour",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 100000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_FilmBoxSepia",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 100000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_Firelog",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 2000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_Fuse",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 150000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_GunpowderCan",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_PowderItemSerialized": "{\"m_WeightKG\":500000000}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_Gut",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_EvolveItemSerialized": "{\"m_HoursPlayed\":66.83123,\"m_TimeSpentEvolvingGameHours\":73.26339}",
+      "m_WeightKG": 0.1,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 20.0
+    }
+  },
+  {
+    "name": "GEAR_GutDried",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 100000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_Hook",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 0.01,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_KnifeScrapMetal",
+    "category": "Materials",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_Leather",
+    "category": "Materials",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_LeatherDried",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 0.1,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_LeatherHide",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_EvolveItemSerialized": "{\"m_HoursPlayed\":7752.188,\"m_TimeSpentEvolvingGameHours\":16.3170376}",
+      "m_WeightKG": 500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 30.0
+    }
+  },
+  {
+    "name": "GEAR_LeatherHideDried",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 500000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_LeatherStrips",
+    "category": "Materials",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_Line",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 0.01,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_MapleSapling",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_EvolveItemSerialized": "{\"m_HoursPlayed\":66.83123}",
+      "m_WeightKG": 0.3,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 50.0
+    }
+  },
+  {
+    "name": "GEAR_MapleSaplingDried",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 300000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 50.0
+    }
+  },
+  {
+    "name": "GEAR_MooseHide",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_EvolveItemSerialized": "{\"m_HoursPlayed\":7750.91553,\"m_TimeSpentEvolvingGameHours\":30.9938068}",
+      "m_WeightKG": 5000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 35.0
+    }
+  },
+  {
+    "name": "GEAR_MooseHideDried",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 5000000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_Nylon",
+    "category": "Materials",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_OldMansBeardHarvested",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 10000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_PaperStack",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 100000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_PtarmiganFeathers",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 10000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_RabbitPelt",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_EvolveItemSerialized": "{\"m_HoursPlayed\":7752.188,\"m_TimeSpentEvolvingGameHours\":16.315609}",
+      "m_WeightKG": 100000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 15.0
+    }
+  },
+  {
+    "name": "GEAR_RabbitPeltDried",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 0.1,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_ReishiMushroom",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 50000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_RoseHip",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 0.01,
+      "m_GearItemSaveVersion": 4,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_ScrapLead",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 250000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_ScrapMetal",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 200000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{\"m_SkipInspectVO\":true}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_SpearHead",
+    "category": "Materials",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_Stone",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 0.25,
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_WireBundle",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 100000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_WolfPelt",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_EvolveItemSerialized": "{\"m_HoursPlayed\":7750.91553,\"m_TimeSpentEvolvingGameHours\":70.7057}",
+      "m_WeightKG": 750000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 20.0
+    }
+  },
+  {
+    "name": "GEAR_WolfPeltDried",
+    "category": "Materials",
+    "source": "survival",
+    "template": {
+      "m_StackableItemSerialized": "{\"m_UnitsProxy\":1}",
+      "m_WeightKG": 750000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_AstridBackPack_hangar",
+    "category": "Other",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_BearEar",
+    "category": "Other",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_BearSpear",
+    "category": "Other",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_BearSpearBroken",
+    "category": "Other",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_BearSpearBrokenStory",
+    "category": "Other",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_BearSpearRelic",
+    "category": "Other",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_BearSpearStory",
+    "category": "Other",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_BookTallTalesFishing",
+    "category": "Other",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_BookTallTalesGlowCave",
+    "category": "Other",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_BookTallTalesStag",
+    "category": "Other",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_BookTallTalesYeti",
+    "category": "Other",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_Brand",
+    "category": "Other",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_Ep3Rosary",
+    "category": "Other",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_Ep3_ChurchArtifact",
+    "category": "Other",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_Ep4GoldNugget",
+    "category": "Other",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_Ep4PowerWorkerID1",
+    "category": "Other",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_Ep4PowerWorkerID2",
+    "category": "Other",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_EP4_InfirmaryMeds",
+    "category": "Other",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_FlareGunCase_hangar",
+    "category": "Other",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_FoodSupplies_hangar",
+    "category": "Other",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_ForestTalkerBloodyItem",
+    "category": "Other",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_ForestTalkerHiddenItem",
+    "category": "Other",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_ForgeBlueprints",
+    "category": "Other",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_GoldNugget",
+    "category": "Other",
+    "source": "survival",
+    "template": {
+      "m_WeightKG": 250000000,
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_GreyMotherPearls",
+    "category": "Other",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_HardCase",
+    "category": "Other",
+    "source": "other-modes",
+    "template": {
+      "m_GearItemSaveVersion": 5,
+      "m_InspectSerialized": "{}",
+      "m_NormalizedCondition": 1.0,
+      "m_CurrentHPProxy": 100.0
+    }
+  },
+  {
+    "name": "GEAR_HardCase_hangar",
+    "category": "Other",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_MiltonGardenCache",
+    "category": "Other",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_OldLadyStolenItem",
+    "category": "Other",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_TrailerSupplies",
+    "category": "Other",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_WolfCarcass",
+    "category": "Other",
+    "source": "list"
+  },
+  {
+    "name": "GEAR_WolfSkinCapeTallTales",
+    "category": "Other",
+    "source": "list"
+  }
+]

@@ -37,8 +37,22 @@ public static class ItemCategories
 
     private static readonly string[] NoteNames =
     [
-        "Note", "PostCard", "Postcard", "RecipeCard", "BlueprintCard", "Logbook", "Journal", "ClipBoard",
-        "Memo", "Papers", "Schematic", "Pamphlet", "SurvivalPath", "ForemanLog",
+        "Note", "PostCard", "Postcard", "RecipeCard", "BlueprintCard", "Logbook", "LogBook", "Journal", "ClipBoard",
+        "Memo", "Papers", "Schematic", "Pamphlet", "SurvivalPath", "ForemanLog", "Diary", "Letter", "Report",
+        "Flyer", "Notice", "Manifest", "Bill", "Clipping", "Rumour", "Knowledge", "Collectible", "Poster", "Hymn",
+        "Plans", "Thankyou", "Prescription", "Code", "_Dir", "WorkerLog", "SurvivalSchool",
+    ];
+
+    private static readonly string[] ClothingNames =
+    [
+        "Cloak", "Coat", "Parka", "Boots", "Mittens", "Gloves", "Balaclava", "Socks", "Pants", "Shirt", "Sweater",
+        "Underwear", "AviatorCap", "ImprovisedHat",
+    ];
+
+    private static readonly string[] FoodNames =
+    [
+        "Flour", "Salt", "Oats", "Potato", "Carrot", "Pumpkin", "Soup", "Tea", "Raw", "Cooked", "Quarter",
+        "Water500ml", "Water1000ml",
     ];
 
     private static readonly string[] FireNames =
@@ -50,22 +64,27 @@ public static class ItemCategories
     private static readonly string[] FirstAidNames =
     [
         "Bandage", "Antibiotics", "PainKillers", "HydrogenPeroxide", "WaterPurification", "Dressing",
-        "EmergencyStim", "Prepared",
+        "Stim", "Prepared", "TraumaKit", "HeatPad", "Insulin", "Medical",
     ];
 
     private static readonly string[] MaterialNames =
     [
         "ArrowHead", "ArrowShaft", "Cloth", "Gut", "Hide", "Pelt", "Leather", "Sapling", "ScrapMetal",
-        "Feather", "Mushroom", "RoseHip", "Harvested", "Lead", "Birchbark", "Hardcase",
+        "Feather", "Mushroom", "RoseHip", "Harvested", "Lead", "Birchbark", "Hardcase", "Sulfur", "Gunpowder",
+        "Nylon", "SpearHead",
     ];
 
-    private static readonly string[] KeyNames = ["Key", "Watch", "HiddenWallCache"];
+    // Story / quest objects: keys, IDs, machine parts
+    private static readonly string[] KeyNames =
+        ["Key", "Watch", "HiddenWallCache", "Crank", "Valve", "Parts", "HatchWheel", "Detonator"];
 
     // Checked after MaterialNames, so ArrowHead / ArrowShaft stay materials
     private static readonly string[] ToolNames =
     [
         "Arrow", "Ammo", "BoltCutters", "HookAndLine", "SewingKit", "Backpack", "Travois", "Whetstone",
-        "Prybar", "Hacksaw", "Hammer", "Crampons", "Rope", "Snowshoes", "Canteen", "Flask",
+        "Prybar", "Hacksaw", "Hammer", "Crampons", "Rope", "Snowshoes", "Canteen", "Flask", "Bow", "Axe",
+        "Tools", "SharpeningStone", "CleaningKit", "CanOpener", "Lure", "TipUp", "FishingLine", "NoiseMaker",
+        "Vice", "Canister", "CarBattery", "Shovel", "Flashlight", "StumpRemover", "Rifle", "Revolver", "Knife",
     ];
 
     private static readonly string[] ToolComponents =
@@ -74,7 +93,8 @@ public static class ItemCategories
         "m_FlareItemSerialized", "m_FlashlightItemSerialized", "m_KeroseneLampItemSerialized",
         "m_TorchItemSerialized", "m_CookingPotItemSerialized", "m_SprayPaintCanSerialized",
         "m_RespiratorSerialized", "m_HandheldshortwaveSerialized", "m_BedSerialized",
-        "m_ResearchItemSerialized", "m_LiquidItemSerialized",
+        "m_ResearchItemSerialized", "m_LiquidItemSerialized", "m_CrankLampItemSerialized",
+        "m_InsulatedFlaskSerialized",
     ];
 
     public static ItemCategory Classify(string prefabName, JObject gear)
@@ -84,11 +104,15 @@ public static class ItemCategories
         // Names first for paper items: some notes carry generic components (MissionObject, ObjectGuid)
         if (ContainsAny(name, NoteNames)) return ItemCategory.NotesAndCollectibles;
 
-        if (Has(gear, "m_ClothingItemSerialized")) return ItemCategory.Clothing;
+        if (Has(gear, "m_ClothingItemSerialized") || ContainsAny(name, ClothingNames)) return ItemCategory.Clothing;
         if (Has(gear, "m_FoodItemSerialized") || Has(gear, "m_WaterSupplySerialized") || Has(gear, "m_BodyHarvestSerialized"))
             return ItemCategory.FoodAndDrink;
         if (Has(gear, "m_MatchesItemSerialized") || ContainsAny(name, FireNames)) return ItemCategory.FireStarting;
+        // Plain books (BookA, BookManual...) are fuel; skill books have research data and fall through to Tools
+        if (name.StartsWith("Book") && !Has(gear, "m_ResearchItemSerialized") && gear.Count > 0) return ItemCategory.FireStarting;
         if (ContainsAny(name, FirstAidNames)) return ItemCategory.FirstAid;
+        if (ContainsAny(name, FoodNames)) return ItemCategory.FoodAndDrink;
+        if (name.EndsWith("Map")) return ItemCategory.NotesAndCollectibles;
         if (ContainsAny(name, MaterialNames)) return ItemCategory.Materials;
         if (ContainsAny(name, KeyNames) || name.EndsWith("ID")) return ItemCategory.KeysAndQuest;
         if (ToolComponents.Any(c => Has(gear, c)) || ContainsAny(name, ToolNames)) return ItemCategory.Tools;
