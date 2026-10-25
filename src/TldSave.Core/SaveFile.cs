@@ -98,6 +98,7 @@ public sealed class SaveFile
     {
         var dict = new JObject();
         var changed = new List<string>();
+        var newFingerprints = new Dictionary<string, byte[]>();
         foreach (var (key, value) in sections)
         {
             var json = Encoding.UTF8.GetBytes(TldJson.Serialize(value));
@@ -116,14 +117,25 @@ public sealed class SaveFile
             dict[key] = original?.Type == JTokenType.Array
                 ? new JArray(compressed.Select(b => (int)b))
                 : Convert.ToBase64String(compressed);
-            fingerprints[key] = fingerprint;
+            newFingerprints[key] = fingerprint;
             changed.Add(key);
         }
-        Slot["m_Dict"] = dict;
-        LastSaveChangedSections = changed;
 
-        var bytes = Lzf.Compress(Encoding.UTF8.GetBytes(TldJson.Serialize(Slot)));
-        WriteVerified(path, temp => File.WriteAllBytes(temp, bytes));
+        // Write first; only update our state once the file is really saved, so a failed save is retried in full
+        var previousDict = Slot["m_Dict"];
+        Slot["m_Dict"] = dict;
+        try
+        {
+            var bytes = Lzf.Compress(Encoding.UTF8.GetBytes(TldJson.Serialize(Slot)));
+            WriteVerified(path, temp => File.WriteAllBytes(temp, bytes));
+        }
+        catch
+        {
+            Slot["m_Dict"] = previousDict;
+            throw;
+        }
+        foreach (var (key, fingerprint) in newFingerprints) fingerprints[key] = fingerprint;
+        LastSaveChangedSections = changed;
 
         if (string.Equals(Path.GetFullPath(path), Path.GetFullPath(FilePath), StringComparison.OrdinalIgnoreCase))
             LoadedWriteTimeUtc = File.GetLastWriteTimeUtc(path);

@@ -99,16 +99,10 @@ public partial class RestoreBackupWindow : Window
         string message;
         if (File.Exists(target))
         {
-            string current;
-            try
-            {
-                var header = SaveFile.ReadHeader(target);
-                current = $"\"{(string?)header["m_DisplayName"]}\", game last saved {(string?)header["m_Timestamp"]}";
-            }
-            catch (Exception)
-            {
-                current = "unreadable file";
-            }
+            var header = SaveLocator.TryReadHeader(target);
+            var current = header is null
+                ? "unreadable file"
+                : $"\"{(string?)header["m_DisplayName"]}\", game last saved {(string?)header["m_Timestamp"]}";
 
             message = $"⚠ This will OVERWRITE an existing save file:\n\n{target}\n({current})\n\n" +
                       $"It will be replaced by the backup \"{backup.DisplayName}\" taken {backup.CreatedText}.\n\n" +

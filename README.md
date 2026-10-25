@@ -50,7 +50,8 @@ Only Survival saves are listed. Story and challenge saves are not supported.
 | **Inventory** | Items are grouped by category like in the game. Select an item to change its **quantity** (stackable items like wood, matches, ammo) or its **condition**, or to **remove** it. Click **Add item…** to search the item list and add new items |
 | **Raw JSON** | Read-only view of the whole save, for the curious |
 
-The window title shows a `*` while you have unsaved changes.
+The window title shows a `*` while you have unsaved changes. **Reload save** loads the open save again from
+disk and discards unsaved edits (you're asked first). Use it if the game saved meanwhile, or after an error.
 
 ### 4. Save
 Click **Save (with backup)**. The editor first copies the current save file to the backup folder (see below),

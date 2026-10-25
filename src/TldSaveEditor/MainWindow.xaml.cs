@@ -77,6 +77,18 @@ public partial class MainWindow : Window
         if (ConfirmDiscardChanges()) RefreshSaveList();
     }
 
+    /// <summary>Loads the open save again from disk, e.g. after the game saved it or after an error.</summary>
+    private async void Reload_Click(object sender, RoutedEventArgs e)
+    {
+        if (save is null)
+        {
+            SetStatus("No save is open.");
+            return;
+        }
+        if (!ConfirmDiscardChanges()) return;
+        await LoadSaveAsync(save.FilePath);
+    }
+
     private async void SavesList_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
         if (ignoreSaveSelection || SavesList.SelectedItem is not SaveSlotInfo slot || slot == currentSlot) return;
@@ -369,7 +381,7 @@ public partial class MainWindow : Window
                 $"This save file was modified after you opened it in the editor (at {File.GetLastWriteTime(save.FilePath):HH:mm:ss}), " +
                 "probably by the game.\n\nSaving now replaces that newer version with the one you loaded, plus your edits. " +
                 "The newer version is still backed up first.\n\nOverwrite anyway?\n\n" +
-                "(Choose No, then select the save again in the list to load the newer version.)",
+                "(Choose No, then click Reload save to load the newer version.)",
                 "File changed on disk", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No) != MessageBoxResult.Yes)
         {
             SetStatus("Save cancelled: the file changed on disk.");
@@ -440,18 +452,19 @@ public partial class MainWindow : Window
         var dialog = new RestoreBackupWindow(selected) { Owner = this };
         if (dialog.ShowDialog() != true || dialog.RestoredSavePath is not { } restored) return;
 
-        var wasOpen = string.Equals(save?.FilePath, restored, StringComparison.OrdinalIgnoreCase);
-        SetDirty(false);
         RefreshSaveList();
-        if (wasOpen)
-        {
-            await LoadSaveAsync(restored);
-            SetStatus($"Restored and reloaded {restored}");
-        }
-        else
+        if (save is null)
         {
             SetStatus($"Restored {restored}");
+            return;
         }
+
+        // Reload the open save whatever it is: if it's the restored one, show the restored data; if it's another
+        // one, the edits the user agreed to discard must really go, not end up in the next Save
+        var open = save.FilePath;
+        var wasRestored = string.Equals(open, restored, StringComparison.OrdinalIgnoreCase);
+        await LoadSaveAsync(open);
+        SetStatus(wasRestored ? $"Restored and reloaded {restored}" : $"Restored {restored}. Reloaded {open} from disk.");
     }
 
     private void OpenBackups_Click(object sender, RoutedEventArgs e)

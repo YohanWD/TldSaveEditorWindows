@@ -115,13 +115,16 @@ public static partial class SaveLocator
     /// <summary>The save file a backup restores to, e.g. ...\Survival\sandbox1.</summary>
     public static string RestoreTarget(BackupInfo backup) => Path.Combine(SurvivalFolder, backup.SaveFileName);
 
-    /// <summary>In-game name of a save file, or null if it doesn't exist or can't be read.</summary>
-    public static string? ReadDisplayName(string savePath)
+    /// <summary>The save's header (name, mode, timestamp), or null if the file doesn't exist or can't be read.</summary>
+    public static Newtonsoft.Json.Linq.JObject? TryReadHeader(string savePath)
     {
         if (!File.Exists(savePath)) return null;
-        try { return (string?)SaveFile.ReadHeader(savePath)["m_DisplayName"]; }
+        try { return SaveFile.ReadHeader(savePath); }
         catch (Exception) { return null; }
     }
+
+    /// <summary>In-game name of a save file, or null if it doesn't exist or can't be read.</summary>
+    public static string? ReadDisplayName(string savePath) => (string?)TryReadHeader(savePath)?["m_DisplayName"];
 
     /// <summary>
     /// True if the save the backup would replace is a different run (different in-game name). Happens when a run

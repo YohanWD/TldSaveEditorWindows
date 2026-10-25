@@ -67,6 +67,21 @@ public class SaveFileTests : IDisposable
     }
 
     [Fact]
+    public void A_failed_save_is_retried_in_full_by_the_next_one()
+    {
+        var path = files.Copy(TestFiles.Small);
+        var save = SaveFile.Load(path);
+        new PlayerState(save).Thirst = 42;
+
+        // Fails: the folder doesn't exist
+        Assert.ThrowsAny<IOException>(() => save.Save(Path.Combine(files.Folder, "missing", "sandbox1")));
+
+        save.Save(path);
+        Assert.Equal(["global"], save.LastSaveChangedSections);
+        Assert.Equal(42, new PlayerState(SaveFile.Load(path)).Thirst);
+    }
+
+    [Fact]
     public void Corrupt_data_never_replaces_the_save()
     {
         var path = files.Copy(TestFiles.Small);

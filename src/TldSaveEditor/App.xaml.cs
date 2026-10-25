@@ -28,7 +28,7 @@ public partial class App : Application
         MessageBox.Show(
             $"Unexpected error:\n\n{e.Exception.GetType().Name}: {e.Exception.Message}\n\n" +
             "The editor stays open, but the action that failed may have been only partly applied.\n" +
-            "Check your edits. If anything looks wrong, reload the save (select it again in the list) instead of saving." +
+            "Check your edits. If anything looks wrong, click Reload save instead of saving." +
             (log is null ? "" : $"\n\nDetails were written to:\n{log}"),
             "TLD Save Editor", MessageBoxButton.OK, MessageBoxImage.Error);
     }

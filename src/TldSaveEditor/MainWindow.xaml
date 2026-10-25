@@ -15,7 +15,9 @@
     <DockPanel>
         <!-- Toolbar -->
         <StackPanel x:Name="Toolbar" DockPanel.Dock="Top" Orientation="Horizontal" Margin="8">
-            <Button Content="Refresh" Click="Refresh_Click" />
+            <Button Content="Refresh" Click="Refresh_Click" ToolTip="Refresh the list of saves" />
+            <Button Content="Reload save" Click="Reload_Click"
+                    ToolTip="Load the open save again from disk. Unsaved edits are discarded (you're asked first)." />
             <Button Content="Open file…" Click="OpenFile_Click" />
             <Button x:Name="SaveButton" Content="Save (with backup)" Click="Save_Click" IsEnabled="False" FontWeight="Bold" />
             <Separator Margin="6,0,12,0" />
@@ -38,7 +40,7 @@
 
             <!-- Survival saves -->
             <DockPanel>
-                <TextBlock DockPanel.Dock="Top" Text="Surival svaves" FontWeight="Bold" Margin="0,0,0,4" />
+                <TextBlock DockPanel.Dock="Top" Text="Survival saves" FontWeight="Bold" Margin="0,0,0,4" />
                 <ListBox x:Name="SavesList" SelectionChanged="SavesList_SelectionChanged">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
