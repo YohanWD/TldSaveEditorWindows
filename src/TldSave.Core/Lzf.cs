@@ -12,9 +12,15 @@ public static class Lzf
     private const int MaxOffset = 1 << 13;          // 8192
     private const int MaxReference = (1 << 8) + (1 << 3); // 264
 
+    /// <summary>
+    /// Largest output Decompress accepts. Real saves are at most ~15 MB decompressed; a crafted file that
+    /// would expand beyond this gets a clean error instead of exhausting memory.
+    /// </summary>
+    public const int MaxDecompressedSize = 256 * 1024 * 1024;
+
     public static byte[] Decompress(ReadOnlySpan<byte> input)
     {
-        var output = new byte[Math.Max(input.Length * 4, 64)];
+        var output = new byte[Math.Clamp((long)input.Length * 4, 64, MaxDecompressedSize)];
         int ip = 0, op = 0;
 
         while (ip < input.Length)
@@ -36,6 +42,7 @@ public static class Lzf
                 // Back reference: copy (length + 2) bytes from earlier output
                 int length = ctrl >> 5;
                 int reference = op - ((ctrl & 0x1F) << 8) - 1;
+                if (ip + (length == 7 ? 2 : 1) > input.Length) throw new InvalidDataException("LZF: back reference past end of input");
                 if (length == 7) length += input[ip++];
                 reference -= input[ip++];
                 length += 2;
@@ -129,6 +136,8 @@ public static class Lzf
     private static void EnsureCapacity(ref byte[] buffer, int needed)
     {
         if (needed <= buffer.Length) return;
-        Array.Resize(ref buffer, Math.Max(needed, buffer.Length * 2));
+        if (needed > MaxDecompressedSize)
+            throw new InvalidDataException($"LZF: decompressed data exceeds {MaxDecompressedSize / (1024 * 1024)} MB, not a valid save");
+        Array.Resize(ref buffer, (int)Math.Min(Math.Max(needed, (long)buffer.Length * 2), MaxDecompressedSize));
     }
 }

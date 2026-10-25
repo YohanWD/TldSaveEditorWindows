@@ -461,7 +461,8 @@ public partial class MainWindow : Window
         try
         {
             Directory.CreateDirectory(SaveLocator.BackupFolder);
-            System.Diagnostics.Process.Start("explorer.exe", SaveLocator.BackupFolder);
+            // Let the shell open the folder: a raw explorer.exe argument breaks on paths with commas
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(SaveLocator.BackupFolder) { UseShellExecute = true });
         }
         catch (Exception ex)
         {

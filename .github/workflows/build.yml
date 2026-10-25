@@ -1,6 +1,9 @@
 # Builds the single-file TldSaveEditor.exe.
-# - Pushing a tag like v1.2.0: build and create a GitHub Release with the zip, using the tag as version.
+# - Pushing a tag like v1.2.0: build, then create a GitHub Release with the zip, using the tag as version.
 # - "Run workflow" button (Actions tab): test build only, exe attached to the run under Artifacts.
+#
+# Security: actions are pinned to a commit SHA (a tag can be moved to other code, a commit can't).
+# The version each SHA points to is in the comment. Only the release job can write to the repository.
 
 name: Build
 
@@ -9,17 +12,20 @@ on:
     tags: ['v*']
   workflow_dispatch:
 
+# Default for every job: read-only
 permissions:
-  contents: write # needed to create releases
+  contents: read
 
 jobs:
   build:
     runs-on: windows-latest
+    outputs:
+      version: ${{ steps.version.outputs.version }}
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
 
-      - uses: actions/setup-dotnet@v5
+      - uses: actions/setup-dotnet@26b0ec14cb23fa6904739307f278c14f94c95bf1 # v5.4.0
         with:
           dotnet-version: '10.0.x'
 
@@ -27,6 +33,7 @@ jobs:
         id: version
         shell: pwsh
         run: |
+          # v1.2.0 tag -> 1.2.0; otherwise keep the version from the csproj
           if ("${{ github.ref_type }}" -eq "tag") {
             $version = "${{ github.ref_name }}".TrimStart("v")
             "args=-p:Version=$version" >> $env:GITHUB_OUTPUT
@@ -48,14 +55,33 @@ jobs:
           Compress-Archive -Path publish/win-x64/TldSaveEditor.exe, README.md, THIRD_PARTY_NOTICES.md `
             -DestinationPath "publish/TldSaveEditor-${{ steps.version.outputs.version }}-win-x64.zip"
 
-      - uses: actions/upload-artifact@v6
+      # The exe on its own, for test builds (Actions tab > run > Artifacts)
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
         with:
           name: TldSaveEditor-${{ steps.version.outputs.version }}-win-x64
           path: publish/win-x64/TldSaveEditor.exe
 
-      - name: GitHub Release
+      # The release zip, handed to the release job
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
         if: github.ref_type == 'tag'
-        uses: softprops/action-gh-release@v3
         with:
-          files: publish/TldSaveEditor-${{ steps.version.outputs.version }}-win-x64.zip
+          name: release-zip
+          path: publish/TldSaveEditor-${{ steps.version.outputs.version }}-win-x64.zip
+
+  release:
+    needs: build
+    if: github.ref_type == 'tag'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # create the release; only this job gets write access
+
+    steps:
+      - uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53 # v6.0.0
+        with:
+          name: release-zip
+
+      - name: GitHub Release
+        uses: softprops/action-gh-release@efb35369e0ad2afab669f228072c1b0d510eae64 # v3.0.3
+        with:
+          files: TldSaveEditor-${{ needs.build.outputs.version }}-win-x64.zip
           generate_release_notes: true

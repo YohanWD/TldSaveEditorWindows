@@ -12,13 +12,17 @@ namespace TldSave.Core;
 /// </summary>
 public static class TldJson
 {
+    public const int MaxDepth = 256;
+
     public static JToken Parse(string json)
     {
         using var reader = new JsonTextReader(new StringReader(json))
         {
             DateParseHandling = DateParseHandling.None,
             FloatParseHandling = FloatParseHandling.Double,
-            MaxDepth = null,
+            // Real saves nest at most ~13 levels; the limit turns a crafted, absurdly deep file into a clean
+            // error instead of a stack overflow (which can't be caught) in the recursive code that walks it
+            MaxDepth = TldJson.MaxDepth,
         };
         return JToken.ReadFrom(reader);
     }

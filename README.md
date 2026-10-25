@@ -232,6 +232,10 @@ git push origin v1.0.1
 The tag sets the version (`v1.0.1` → 1.0.1). To test a build without releasing, open the Actions tab, select
 *Build*, and click *Run workflow*. The exe is attached to the run under *Artifacts*.
 
+Actions are pinned to commit SHAs, and only the release job can write to the repository.
+[.github/dependabot.yml](.github/dependabot.yml) checks for new action versions weekly and opens a single pull
+request that updates the SHAs and their version comments. Review and merge it.
+
 ## Testing
 
 - Load and save were checked against 22 real saves: decoded data is identical after a round trip.
