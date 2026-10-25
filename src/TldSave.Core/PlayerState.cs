@@ -80,7 +80,8 @@ public sealed class PlayerState : INotifyPropertyChanged
         {
             var wellFed = Read("m_WellFedSerialized");
             wellFed["m_Active"] = value;
-            if (value && (double?)wellFed["m_ElapsedHoursNotStarving"] < 72) wellFed["m_ElapsedHoursNotStarving"] = 72.0;
+            // A missing field means 0 hours: set it too, or the game could drop the buff for not having eaten enough
+            if (value && ((double?)wellFed["m_ElapsedHoursNotStarving"] ?? 0) < 72) wellFed["m_ElapsedHoursNotStarving"] = 72.0;
             Write("m_WellFedSerialized", wellFed);
             if (!value && Condition > 100) Condition = 100;
         }

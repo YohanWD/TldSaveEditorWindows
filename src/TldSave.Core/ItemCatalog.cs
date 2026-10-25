@@ -15,7 +15,7 @@ public enum CatalogSource
 
 public sealed record CatalogItem(string Name, ItemCategory Category, CatalogSource Source, JObject? Template)
 {
-    public string ShortName => Name.StartsWith("GEAR_") ? Name["GEAR_".Length..] : Name;
+    public string ShortName => PrefabNames.Short(Name);
     public string CategoryName => ItemCategories.DisplayName(Category);
     public bool IsStackable => Template?["m_StackableItemSerialized"] is { Type: JTokenType.String };
 

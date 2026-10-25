@@ -46,6 +46,10 @@ jobs:
       - name: Build solution
         run: dotnet build TldSaveEditor.slnx -c Release
 
+      # A failing test stops here: no exe is published and the release job doesn't run
+      - name: Test
+        run: dotnet test tests/TldSave.Core.Tests -c Release --no-build
+
       - name: Publish exe
         run: dotnet publish src/TldSaveEditor -p:PublishProfile=win-x64 ${{ steps.version.outputs.args }}
 

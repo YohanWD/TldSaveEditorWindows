@@ -47,7 +47,7 @@ public partial class MainWindow : Window
     private const string AllCategories = "All categories";
 
     private bool MatchesFilters(InventoryItem item) =>
-        item.PrefabName.Contains(FilterBox.Text, StringComparison.OrdinalIgnoreCase)
+        item.PrefabName.Contains(FilterBox.Text.Trim(), StringComparison.OrdinalIgnoreCase)
         && (CategoryFilter.SelectedItem is not string category || category == AllCategories || item.CategoryName == category);
 
     // ------------------------------------------------------------ save list / loading
@@ -191,10 +191,8 @@ public partial class MainWindow : Window
         DaysText.Text = $"{save.HoursPlayed / 24:0.0}  ({save.HoursPlayed:0.#} hours)";
         ConditionText.Text = condition is { } c ? $"{c:0.#}%" : "?";
         TimestampText.Text = save.Timestamp;
-        ScenesText.Text = (save.Sections.Count - save.Sections.Keys.Count(IsMetaSection)).ToString();
+        ScenesText.Text = save.Sections.Keys.Count(k => !SaveFile.IsMetaSection(k)).ToString();
     }
-
-    private static bool IsMetaSection(string key) => key is "boot" or "global" or "info" or "screenshot" or "sandbox_global";
 
     // ------------------------------------------------------------ inventory
 

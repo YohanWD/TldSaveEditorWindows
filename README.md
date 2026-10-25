@@ -170,6 +170,7 @@ Or open `TldSaveEditor.slnx` in Visual Studio.
 | `src/TldSave.Core` | Save file library, no UI. `Lzf` (compression), `TldJson` (JSON with NaN/Infinity and nested JSON strings), `SaveFile` (load/save), `Inventory`, `PlayerState` (status, skills, afflictions), `ItemCatalog`, `SaveLocator` (find saves, backups) |
 | `src/TldSaveEditor` | WPF app: save list, Overview, Player, Inventory, Raw JSON viewer |
 | `tools/CatalogBuilder` | Generates `ItemCatalog.json` from the saves on this PC (see below) |
+| `tests/TldSave.Core.Tests` | Automated tests on two real saves (see Testing) |
 
 ## Save format
 
@@ -237,6 +238,18 @@ Actions are pinned to commit SHAs, and only the release job can write to the rep
 request that updates the SHAs and their version comments. Review and merge it.
 
 ## Testing
+
+```
+dotnet test tests/TldSave.Core.Tests
+```
+
+`tests/TldSave.Core.Tests` (xUnit, ~70 tests, ~10 s) covers LZF, JSON (NaN/Infinity, dates, depth limit),
+save/load (only edited sections rewritten, crash-safe writes, changed-on-disk detection), inventory, player
+state and the item catalog. They run on two real survival saves in `Fixtures/`: `sandbox1_GoDLC` (small) and
+`sandbox3_1000Days` (13 MB, day 323). Both were checked for personal data: none, only game state. Tests never
+touch your real save folder; they work on copies in a temp folder.
+
+The release workflow runs the tests before publishing: **a failing test blocks the release.**
 
 - Load and save were checked against 22 real saves: decoded data is identical after a round trip.
 - Validated in game (2026-10-25) with [docs/TEST_SAVE_CHECKLIST.md](docs/TEST_SAVE_CHECKLIST.md): 66 added items

@@ -99,7 +99,7 @@ public static class ItemCategories
 
     public static ItemCategory Classify(string prefabName, JObject gear)
     {
-        var name = prefabName.StartsWith("GEAR_") ? prefabName["GEAR_".Length..] : prefabName;
+        var name = PrefabNames.Short(prefabName);
 
         // Names first for paper items: some notes carry generic components (MissionObject, ObjectGuid)
         if (ContainsAny(name, NoteNames)) return ItemCategory.NotesAndCollectibles;

@@ -47,7 +47,7 @@ public sealed class Inventory
             ["m_HoursPlayed"] = now,
             ["m_Position"] = new JArray(0.0, 0.0, 0.0),
             ["m_Rotation"] = new JArray(0.0, 0.0, 0.0, 1.0),
-            ["m_InstanceIDProxy"] = Random.Shared.Next(1, int.MaxValue),
+            ["m_InstanceIDProxy"] = NewInstanceId(),
         };
         if (template is not null)
             gear.Merge(template.DeepClone(), new JsonMergeSettings { MergeArrayHandling = MergeArrayHandling.Replace });
@@ -67,6 +67,15 @@ public sealed class Inventory
         var item = new InventoryItem(entry);
         Items.Add(item);
         return item;
+    }
+
+    /// <summary>A random instance ID that no other inventory item uses.</summary>
+    private int NewInstanceId()
+    {
+        var used = Items.Select(i => (int?)i.Gear["m_InstanceIDProxy"]).ToHashSet();
+        int id;
+        do id = Random.Shared.Next(1, int.MaxValue); while (used.Contains(id));
+        return id;
     }
 
     /// <summary>Components such as food keep their own m_HoursPlayed timestamp; set those to "now" too.</summary>
@@ -110,7 +119,7 @@ public sealed class InventoryItem : INotifyPropertyChanged
     public string PrefabName => (string?)Entry["m_PrefabName"] ?? "";
 
     /// <summary>Prefab name without the GEAR_ prefix, for lists.</summary>
-    public string ShortName => PrefabName.StartsWith("GEAR_") ? PrefabName["GEAR_".Length..] : PrefabName;
+    public string ShortName => PrefabNames.Short(PrefabName);
 
     public ItemCategory Category => ItemCategories.Classify(PrefabName, Gear);
     public string CategoryName => ItemCategories.DisplayName(Category);

@@ -51,7 +51,7 @@ foreach (var file in saveFiles)
 
     foreach (var (key, section) in save.Sections)
     {
-        if (key is "boot" or "global" or "info" or "screenshot" or "sandbox_global" || section is not JObject scene) continue;
+        if (SaveFile.IsMetaSection(key) || section is not JObject scene) continue;
 
         var containers = AsObject(scene["m_ContainerManagerSerialized"])?["m_SerializedContainers"] as JArray;
         foreach (var container in containers?.OfType<JObject>() ?? [])

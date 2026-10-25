@@ -54,6 +54,9 @@ public sealed class SaveFile
     public string Timestamp => (string?)Slot["m_Timestamp"] ?? "";
     public bool IsSurvival => GameMode == SaveLocator.SurvivalGameMode;
 
+    /// <summary>True for the sections that aren't a visited scene (location).</summary>
+    public static bool IsMetaSection(string key) => key is "boot" or "global" or "info" or "screenshot" or "sandbox_global";
+
     public JObject Global => (JObject)sections["global"];
     public JObject? Info => sections.GetValueOrDefault("info") as JObject;
     public JObject? Boot => sections.GetValueOrDefault("boot") as JObject;
