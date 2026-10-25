@@ -1,0 +1,148 @@
+using System.ComponentModel;
+using Newtonsoft.Json.Linq;
+
+namespace TldSave.Core;
+
+/// <summary>
+/// The player inventory: global.m_Inventory_Serialized (JSON string)
+///   -> m_SerializedItems[] { m_PrefabName, m_SerializedGear (JSON string) }
+/// Edit the items, then call <see cref="Commit"/> to write them back into the save.
+/// </summary>
+public sealed class Inventory
+{
+    private const string Field = "m_Inventory_Serialized";
+
+    private readonly SaveFile save;
+    private readonly JObject root;
+
+    public List<InventoryItem> Items { get; }
+
+    private Inventory(SaveFile save, JObject root, List<InventoryItem> items)
+    {
+        this.save = save;
+        this.root = root;
+        Items = items;
+    }
+
+    public static Inventory Load(SaveFile save)
+    {
+        var root = save.Global.ReadNested(Field) as JObject ?? new JObject();
+        var items = (root["m_SerializedItems"] as JArray ?? new JArray())
+            .OfType<JObject>()
+            .Select(entry => new InventoryItem(entry))
+            .ToList();
+        return new Inventory(save, root, items);
+    }
+
+    public InventoryItem Add(string prefabName)
+    {
+        // Same defaults as the original TS editor, but timestamped "now" so the item doesn't decay on load
+        var gear = new JObject
+        {
+            ["m_HoursPlayed"] = save.HoursPlayed,
+            ["m_Position"] = new JArray(0.0, 0.0, 0.0),
+            ["m_Rotation"] = new JArray(0.0, 0.0, 0.0, 1.0),
+            ["m_NormalizedCondition"] = 1.0,
+            ["m_InstanceIDProxy"] = Random.Shared.Next(1, int.MaxValue),
+            ["m_GearItemSaveVersion"] = 4,
+        };
+        // If this prefab is already in the inventory as a stack, start the new one as a stack of 1
+        if (Items.Any(i => i.PrefabName == prefabName && i.IsStackable))
+            gear["m_StackableItemSerialized"] = TldJson.Serialize(new JObject { ["m_UnitsProxy"] = 1 });
+
+        var entry = new JObject
+        {
+            ["m_PrefabName"] = prefabName,
+            ["m_SerializedGear"] = TldJson.Serialize(gear),
+        };
+        var item = new InventoryItem(entry);
+        Items.Add(item);
+        return item;
+    }
+
+    public void Remove(InventoryItem item) => Items.Remove(item);
+
+    public void Commit()
+    {
+        foreach (var item in Items) item.WriteBack();
+        root["m_SerializedItems"] = new JArray(Items.Select(i => i.Entry));
+        save.Global.WriteNested(Field, root);
+    }
+}
+
+public sealed class InventoryItem : INotifyPropertyChanged
+{
+    public event PropertyChangedEventHandler? PropertyChanged;
+
+    /// <summary>The raw inventory entry (m_PrefabName, m_SerializedGear, ...).</summary>
+    public JObject Entry { get; }
+
+    /// <summary>Parsed m_SerializedGear. Written back to the entry on <see cref="WriteBack"/>.</summary>
+    public JObject Gear { get; private set; }
+
+    internal InventoryItem(JObject entry)
+    {
+        Entry = entry;
+        Gear = entry.ReadNested("m_SerializedGear") as JObject ?? new JObject();
+    }
+
+    public string PrefabName => (string?)Entry["m_PrefabName"] ?? "";
+
+    /// <summary>0..1. Missing means the game omitted the default (worn-out clothing has none).</summary>
+    public double? Condition
+    {
+        get => (double?)Gear["m_NormalizedCondition"];
+        set
+        {
+            if (value is null) Gear.Remove("m_NormalizedCondition");
+            else Gear["m_NormalizedCondition"] = Math.Clamp(value.Value, 0, 1);
+            if (value > 0 && WornOut) Gear["m_WornOut"] = false;
+            OnChanged();
+        }
+    }
+
+    public double ConditionPercent
+    {
+        get => Math.Round((Condition ?? 0) * 100, 1);
+        set => Condition = value / 100;
+    }
+
+    public bool WornOut => (bool?)Gear["m_WornOut"] ?? false;
+
+    public string ConditionText => Condition is { } c ? $"{c * 100:0}%" : WornOut ? "worn out" : "?";
+
+    private const string StackableField = "m_StackableItemSerialized";
+
+    /// <summary>True for items with a quantity (wood, matches, bandages, arrows...): m_StackableItemSerialized is set.</summary>
+    public bool IsStackable => !string.IsNullOrEmpty((string?)Gear[StackableField]);
+
+    /// <summary>Quantity of a stackable item (m_UnitsProxy). Ignored for non-stackable items.</summary>
+    public int Units
+    {
+        get => (int?)Gear.ReadNested(StackableField)?["m_UnitsProxy"] ?? 0;
+        set
+        {
+            if (!IsStackable) return;
+            var stackable = Gear.ReadNested(StackableField) as JObject ?? new JObject();
+            stackable["m_UnitsProxy"] = Math.Max(1, value);
+            Gear.WriteNested(StackableField, stackable);
+            OnChanged();
+        }
+    }
+
+    public string UnitsText => IsStackable ? $"×{Units}" : "";
+
+    public void ReplaceGear(JObject gear)
+    {
+        Gear = gear;
+        OnChanged();
+    }
+
+    internal void WriteBack() => Entry["m_SerializedGear"] = TldJson.Serialize(Gear);
+
+    private void OnChanged()
+    {
+        // Everything derives from Gear, so refresh all bindings
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(string.Empty));
+    }
+}

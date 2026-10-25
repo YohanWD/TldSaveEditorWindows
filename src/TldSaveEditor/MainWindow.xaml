@@ -1,0 +1,174 @@
+﻿<Window x:Class="TldSaveEditor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="TLD Survival Save Editor" Height="700" Width="1150"
+        Closing="Window_Closing">
+    <Window.Resources>
+        <FontFamily x:Key="Mono">Consolas</FontFamily>
+        <BooleanToVisibilityConverter x:Key="BoolToVisibility" />
+        <Style TargetType="Button">
+            <Setter Property="Padding" Value="10,3" />
+            <Setter Property="Margin" Value="0,0,6,0" />
+        </Style>
+    </Window.Resources>
+
+    <DockPanel>
+        <!-- Toolbar -->
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="8">
+            <Button Content="Refresh" Click="Refresh_Click" />
+            <Button Content="Open file…" Click="OpenFile_Click" />
+            <Button x:Name="SaveButton" Content="Save (with backup)" Click="Save_Click" IsEnabled="False" FontWeight="Bold" />
+        </StackPanel>
+
+        <StatusBar DockPanel.Dock="Bottom">
+            <TextBlock x:Name="StatusText" Text="Ready" />
+        </StatusBar>
+
+        <Grid Margin="8,0,8,8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="240" />
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Survival saves -->
+            <DockPanel>
+                <TextBlock DockPanel.Dock="Top" Text="Surival svaves" FontWeight="Bold" Margin="0,0,0,4" />
+                <ListBox x:Name="SavesList" SelectionChanged="SavesList_SelectionChanged">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Margin="0,2">
+                                <TextBlock Text="{Binding DisplayName}" FontWeight="SemiBold" />
+                                <TextBlock Foreground="Gray" FontSize="11">
+                                    <Run Text="{Binding FileName, Mode=OneWay}" /> · <Run Text="{Binding Timestamp, Mode=OneWay}" />
+                                </TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </DockPanel>
+
+            <GridSplitter Grid.Column="1" HorizontalAlignment="Stretch" />
+
+            <TabControl x:Name="Tabs" Grid.Column="2" IsEnabled="False">
+                <!-- Overview -->
+                <TabItem Header="Overview">
+                    <Grid Margin="12">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="160" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.Resources>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="Margin" Value="0,4" />
+                            </Style>
+                        </Grid.Resources>
+
+                        <TextBlock Grid.Row="0" Text="Name" />
+                        <TextBlock Grid.Row="0" Grid.Column="1" x:Name="NameText" FontWeight="Bold" />
+                        <TextBlock Grid.Row="1" Text="File" />
+                        <TextBlock Grid.Row="1" Grid.Column="1" x:Name="FileText" TextWrapping="Wrap" />
+                        <TextBlock Grid.Row="2" Text="Experience mode" />
+                        <TextBlock Grid.Row="2" Grid.Column="1" x:Name="XpModeText" />
+                        <TextBlock Grid.Row="3" Text="Region / scene" />
+                        <TextBlock Grid.Row="3" Grid.Column="1" x:Name="RegionText" />
+                        <TextBlock Grid.Row="4" Text="Days survived" />
+                        <TextBlock Grid.Row="4" Grid.Column="1" x:Name="DaysText" />
+                        <TextBlock Grid.Row="5" Text="Condition" />
+                        <TextBlock Grid.Row="5" Grid.Column="1" x:Name="ConditionText" />
+                        <TextBlock Grid.Row="6" Text="Last saved" />
+                        <TextBlock Grid.Row="6" Grid.Column="1" x:Name="TimestampText" />
+                        <TextBlock Grid.Row="7" Text="Visited scenes" />
+                        <TextBlock Grid.Row="7" Grid.Column="1" x:Name="ScenesText" />
+                    </Grid>
+                </TabItem>
+
+                <!-- Inventory -->
+                <TabItem Header="Inventory">
+                    <Grid Margin="8">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="320" />
+                            <ColumnDefinition Width="5" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <DockPanel>
+                            <DockPanel DockPanel.Dock="Bottom" Margin="0,6,0,0">
+                                <Button DockPanel.Dock="Right" Content="Add" Click="AddItem_Click" Margin="6,0,0,0" />
+                                <TextBox x:Name="NewPrefabBox" ToolTip="Prefab name, e.g. GEAR_InsulatedFlask_A" VerticalContentAlignment="Center" Text="GEAR_" />
+                            </DockPanel>
+                            <TextBox x:Name="FilterBox" DockPanel.Dock="Top" Margin="0,0,0,6" TextChanged="FilterBox_TextChanged"
+                                     ToolTip="Filter by prefab name" />
+                            <ListBox x:Name="ItemsList" SelectionChanged="ItemsList_SelectionChanged">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <DockPanel Width="270">
+                                            <TextBlock DockPanel.Dock="Right" Text="{Binding ConditionText}" Foreground="Gray" />
+                                            <TextBlock DockPanel.Dock="Right" Text="{Binding UnitsText}" FontWeight="SemiBold" Margin="0,0,10,0" />
+                                            <TextBlock Text="{Binding PrefabName}" TextTrimming="CharacterEllipsis" />
+                                        </DockPanel>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </DockPanel>
+
+                        <GridSplitter Grid.Column="1" HorizontalAlignment="Stretch" />
+
+                        <DockPanel Grid.Column="2" x:Name="ItemPanel" IsEnabled="False" Margin="6,0,0,0">
+                            <StackPanel DockPanel.Dock="Top">
+                                <TextBlock Text="{Binding PrefabName}" FontSize="16" FontWeight="Bold" />
+                                <StackPanel Orientation="Horizontal" Margin="0,8,0,0"
+                                            Visibility="{Binding IsStackable, Converter={StaticResource BoolToVisibility}}">
+                                    <TextBlock Text="Quantity" Width="90" VerticalAlignment="Center" />
+                                    <Button Content="−" Width="30" Padding="0,3" Click="DecreaseUnits_Click" />
+                                    <TextBox Width="60" TextAlignment="Center" VerticalContentAlignment="Center" Margin="0,0,6,0"
+                                             Text="{Binding Units, UpdateSourceTrigger=LostFocus}" KeyDown="UnitsBox_KeyDown" />
+                                    <Button Content="+" Width="30" Padding="0,3" Click="IncreaseUnits_Click" />
+                                </StackPanel>
+                                <DockPanel Margin="0,8">
+                                    <TextBlock Text="Condition %" Width="90" VerticalAlignment="Center" />
+                                    <TextBox DockPanel.Dock="Right" Width="60"
+                                             Text="{Binding ConditionPercent, UpdateSourceTrigger=LostFocus}" />
+                                    <Slider Minimum="0" Maximum="100" Margin="0,0,8,0" VerticalAlignment="Center"
+                                            Value="{Binding ConditionPercent}" />
+                                </DockPanel>
+                                <StackPanel Orientation="Horizontal" Margin="0,0,0,6">
+                                    <Button Content="Apply JSON" Click="ApplyJson_Click" />
+                                    <Button Content="Remove item" Click="RemoveItem_Click" />
+                                </StackPanel>
+                                <TextBlock Text="Gear data (m_SerializedGear) — edit then click Apply JSON:" Foreground="Gray" />
+                            </StackPanel>
+                            <TextBox x:Name="GearJsonBox" FontFamily="{StaticResource Mono}" AcceptsReturn="True" AcceptsTab="True"
+                                     VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" />
+                        </DockPanel>
+                    </Grid>
+                </TabItem>
+
+                <!-- Raw JSON -->
+                <TabItem Header="Raw JSON">
+                    <DockPanel Margin="8">
+                        <DockPanel DockPanel.Dock="Top" Margin="0,0,0,6">
+                            <TextBlock Text="Section " VerticalAlignment="Center" />
+                            <ComboBox x:Name="SectionCombo" Width="420" HorizontalAlignment="Left"
+                                      SelectionChanged="SectionCombo_SelectionChanged" />
+                        </DockPanel>
+                        <TextBlock DockPanel.Dock="Top" Foreground="Gray" Margin="0,0,0,4"
+                                   Text="Read-only. Nested JSON strings are expanded for readability." />
+                        <TextBox x:Name="RawJsonBox" FontFamily="{StaticResource Mono}" IsReadOnly="True"
+                                 VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" />
+                    </DockPanel>
+                </TabItem>
+            </TabControl>
+        </Grid>
+    </DockPanel>
+</Window>

@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/TldSave.Core/TldSave.Core.csproj" />
+    <Project Path="src/TldSaveEditor/TldSaveEditor.csproj" />
+  </Folder>
+</Solution>
