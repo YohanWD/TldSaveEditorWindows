@@ -125,7 +125,9 @@ public partial class MainWindow : Window
             SectionCombo.SelectedIndex = SectionCombo.Items.IndexOf("global");
             SetDirty(false);
             Tabs.IsEnabled = true;
-            SetStatus($"Loaded {path}");
+            SetStatus(SaveLocator.IsGameRunning()
+                ? $"Loaded {path}. The game is running: you can edit, but quit the game before saving."
+                : $"Loaded {path}");
         }
         catch (Exception e)
         {
@@ -318,6 +320,28 @@ public partial class MainWindow : Window
     private async void Save_Click(object sender, RoutedEventArgs e)
     {
         if (save is null || inventory is null) return;
+
+        // The game keeps the save in memory: it would ignore or overwrite our changes
+        if (SaveLocator.IsGameRunning())
+        {
+            MessageBox.Show(this, "The Long Dark is running.\n\nQuit the game completely, then click Save again. " +
+                "Your edits are kept in the editor meanwhile.", "Save", MessageBoxButton.OK, MessageBoxImage.Warning);
+            return;
+        }
+
+        // Something (usually a game autosave) wrote the file after we loaded it: saving would erase that progress
+        if (save.ChangedOnDisk &&
+            MessageBox.Show(this,
+                $"This save file was modified after you opened it in the editor (at {File.GetLastWriteTime(save.FilePath):HH:mm:ss}), " +
+                "probably by the game.\n\nSaving now replaces that newer version with the one you loaded, plus your edits. " +
+                "The newer version is still backed up first.\n\nOverwrite anyway?\n\n" +
+                "(Choose No, then select the save again in the list to load the newer version.)",
+                "File changed on disk", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No) != MessageBoxResult.Yes)
+        {
+            SetStatus("Save cancelled: the file changed on disk.");
+            return;
+        }
+
         try
         {
             SaveButton.IsEnabled = false;
@@ -331,12 +355,13 @@ public partial class MainWindow : Window
                 return backupPath;
             });
             SetDirty(false);
-            SetStatus($"Saved. Backup: {backup}");
+            var changed = target.LastSaveChangedSections;
+            SetStatus($"Saved ({(changed.Count == 0 ? "no section changed" : "changed: " + string.Join(", ", changed))}). Backup: {backup}");
         }
         catch (Exception ex)
         {
             SetDirty(true);
-            ShowError("Save failed — the original file was backed up first if the error happened while writing", ex);
+            ShowError("Save failed. The save file was not modified", ex);
         }
     }
 

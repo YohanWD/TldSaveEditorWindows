@@ -125,13 +125,13 @@ public static partial class SaveLocator
         var safetyBackup = File.Exists(target) ? Backup(target, "before-restore") : null;
 
         Directory.CreateDirectory(SurvivalFolder);
-        File.Copy(backup.FilePath, target, overwrite: true);
+        // Copy to a temp file, check it decodes, then swap it in: the save is never left half-written
+        SaveFile.WriteVerified(target, temp => File.Copy(backup.FilePath, temp, overwrite: true));
         return safetyBackup;
     }
 
-    /// <summary>True if The Long Dark is running (it would overwrite a restored save).</summary>
-    public static bool IsGameRunning() =>
-        new[] { "tld", "TheLongDark" }.Any(name => System.Diagnostics.Process.GetProcessesByName(name).Length > 0);
+    /// <summary>True if The Long Dark (tld.exe) is running: it keeps the save in memory and would overwrite edits.</summary>
+    public static bool IsGameRunning() => System.Diagnostics.Process.GetProcessesByName("tld").Length > 0;
 }
 
 public sealed record BackupInfo(

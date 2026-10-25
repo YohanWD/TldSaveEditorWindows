@@ -71,6 +71,14 @@ The game keeps your save in memory while it runs:
 
 So: quit the game completely, edit, save in the editor, then start the game.
 
+The editor protects you from these mistakes:
+- **Save** and **Restore** refuse to run while the game (`tld.exe`) is running. Your edits stay in the editor;
+  quit the game and click Save again.
+- If the save file changed after you opened it in the editor (e.g. the game autosaved), **Save warns you**
+  before replacing that newer version.
+- Saves are written to a temporary file, checked, and only then swapped in. A crash or a full disk while
+  saving can't leave a half-written save.
+
 ---
 
 ## Where your saves are
@@ -170,6 +178,11 @@ file                 = LZF( JSON "SlotData" )         m_DisplayName, m_GameMode,
 SlotData.m_Dict[key] = base64 -> LZF( JSON )          boot, global, info, screenshot, one per visited scene
 inside sections      = many values are JSON strings containing more JSON (TldJson.ReadNested / WriteNested)
 ```
+
+On save, only edited sections are re-encoded. `SaveFile` keeps a SHA-256 fingerprint of each section's JSON
+from load; sections whose JSON still matches keep the game's original bytes. An edit to the player rewrites
+only `global` (and `info` for condition), and all scenes stay as the game wrote them. Files are written to
+`<save>.tmp`, verified by loading them back, then swapped in with `File.Replace`.
 
 ## Player tab fields
 
