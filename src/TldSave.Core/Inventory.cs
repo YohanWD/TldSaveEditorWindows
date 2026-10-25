@@ -88,6 +88,12 @@ public sealed class InventoryItem : INotifyPropertyChanged
 
     public string PrefabName => (string?)Entry["m_PrefabName"] ?? "";
 
+    /// <summary>Prefab name without the GEAR_ prefix, for lists.</summary>
+    public string ShortName => PrefabName.StartsWith("GEAR_") ? PrefabName["GEAR_".Length..] : PrefabName;
+
+    public ItemCategory Category => ItemCategories.Classify(PrefabName, Gear);
+    public string CategoryName => ItemCategories.DisplayName(Category);
+
     /// <summary>0..1. Missing means the game omitted the default (worn-out clothing has none).</summary>
     public double? Condition
     {

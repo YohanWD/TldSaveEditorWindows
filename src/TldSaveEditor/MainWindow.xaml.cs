@@ -26,10 +26,26 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
         ItemsList.ItemsSource = items;
-        CollectionViewSource.GetDefaultView(items).Filter = o =>
-            o is InventoryItem item && item.PrefabName.Contains(FilterBox.Text, StringComparison.OrdinalIgnoreCase);
+
+        var view = CollectionViewSource.GetDefaultView(items);
+        view.GroupDescriptions.Add(new PropertyGroupDescription(nameof(InventoryItem.CategoryName)));
+        view.SortDescriptions.Add(new SortDescription(nameof(InventoryItem.Category), ListSortDirection.Ascending));
+        view.SortDescriptions.Add(new SortDescription(nameof(InventoryItem.ShortName), ListSortDirection.Ascending));
+        view.Filter = o => o is InventoryItem item && MatchesFilters(item);
+
+        CategoryFilter.ItemsSource = new[] { AllCategories }
+            .Concat(Enum.GetValues<ItemCategory>().Select(ItemCategories.DisplayName))
+            .ToList();
+        CategoryFilter.SelectedIndex = 0;
+
         RefreshSaveList();
     }
+
+    private const string AllCategories = "All categories";
+
+    private bool MatchesFilters(InventoryItem item) =>
+        item.PrefabName.Contains(FilterBox.Text, StringComparison.OrdinalIgnoreCase)
+        && (CategoryFilter.SelectedItem is not string category || category == AllCategories || item.CategoryName == category);
 
     // ------------------------------------------------------------ save list / loading
 
@@ -160,8 +176,11 @@ public partial class MainWindow : Window
         SelectItem(null);
     }
 
-    private void FilterBox_TextChanged(object sender, TextChangedEventArgs e) =>
-        CollectionViewSource.GetDefaultView(items).Refresh();
+    private void FilterBox_TextChanged(object sender, TextChangedEventArgs e) => RefreshItemsView();
+
+    private void CategoryFilter_SelectionChanged(object sender, SelectionChangedEventArgs e) => RefreshItemsView();
+
+    private void RefreshItemsView() => CollectionViewSource.GetDefaultView(items).Refresh();
 
     private void ItemsList_SelectionChanged(object sender, SelectionChangedEventArgs e) =>
         SelectItem(ItemsList.SelectedItem as InventoryItem);
@@ -205,8 +224,12 @@ public partial class MainWindow : Window
         {
             if (TldJson.Parse(GearJsonBox.Text) is not JObject gear)
                 throw new JsonException("Gear data must be a JSON object { … }");
-            selectedItem.ReplaceGear(gear);
-            SetStatus($"Updated {selectedItem.PrefabName}");
+            var item = selectedItem;
+            item.ReplaceGear(gear);
+            // New gear data can change the category, so re-group and keep the item selected
+            RefreshItemsView();
+            ItemsList.SelectedItem = item;
+            SetStatus($"Updated {item.PrefabName}");
         }
         catch (JsonException ex)
         {

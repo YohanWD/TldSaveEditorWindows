@@ -107,15 +107,57 @@
                                 <Button DockPanel.Dock="Right" Content="Add" Click="AddItem_Click" Margin="6,0,0,0" />
                                 <TextBox x:Name="NewPrefabBox" ToolTip="Prefab name, e.g. GEAR_InsulatedFlask_A" VerticalContentAlignment="Center" Text="GEAR_" />
                             </DockPanel>
-                            <TextBox x:Name="FilterBox" DockPanel.Dock="Top" Margin="0,0,0,6" TextChanged="FilterBox_TextChanged"
-                                     ToolTip="Filter by prefab name" />
-                            <ListBox x:Name="ItemsList" SelectionChanged="ItemsList_SelectionChanged">
+                            <DockPanel DockPanel.Dock="Top" Margin="0,0,0,6">
+                                <ComboBox x:Name="CategoryFilter" DockPanel.Dock="Left" Width="150" Margin="0,0,6,0"
+                                          SelectionChanged="CategoryFilter_SelectionChanged" />
+                                <TextBox x:Name="FilterBox" TextChanged="FilterBox_TextChanged" VerticalContentAlignment="Center"
+                                         ToolTip="Filter by name" />
+                            </DockPanel>
+                            <ListBox x:Name="ItemsList" SelectionChanged="ItemsList_SelectionChanged"
+                                     ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                                <ListBox.GroupStyle>
+                                    <GroupStyle>
+                                        <GroupStyle.ContainerStyle>
+                                            <Style TargetType="GroupItem">
+                                                <Setter Property="Template">
+                                                    <Setter.Value>
+                                                        <ControlTemplate TargetType="GroupItem">
+                                                            <Expander Margin="0,2">
+                                                                <Expander.Style>
+                                                                    <Style TargetType="Expander">
+                                                                        <Setter Property="IsExpanded" Value="True" />
+                                                                        <Style.Triggers>
+                                                                            <!-- Rarely edited groups start collapsed -->
+                                                                            <DataTrigger Binding="{Binding Name}" Value="Notes &amp; collectibles">
+                                                                                <Setter Property="IsExpanded" Value="False" />
+                                                                            </DataTrigger>
+                                                                            <DataTrigger Binding="{Binding Name}" Value="Keys &amp; quest items">
+                                                                                <Setter Property="IsExpanded" Value="False" />
+                                                                            </DataTrigger>
+                                                                        </Style.Triggers>
+                                                                    </Style>
+                                                                </Expander.Style>
+                                                                <Expander.Header>
+                                                                    <TextBlock FontWeight="Bold">
+                                                                        <Run Text="{Binding Name, Mode=OneWay}" />
+                                                                        <Run Text="{Binding ItemCount, Mode=OneWay, StringFormat=({0})}" Foreground="Gray" />
+                                                                    </TextBlock>
+                                                                </Expander.Header>
+                                                                <ItemsPresenter Margin="12,0,0,0" />
+                                                            </Expander>
+                                                        </ControlTemplate>
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </Style>
+                                        </GroupStyle.ContainerStyle>
+                                    </GroupStyle>
+                                </ListBox.GroupStyle>
                                 <ListBox.ItemTemplate>
                                     <DataTemplate>
-                                        <DockPanel Width="270">
+                                        <DockPanel Width="250" ToolTip="{Binding PrefabName}">
                                             <TextBlock DockPanel.Dock="Right" Text="{Binding ConditionText}" Foreground="Gray" />
                                             <TextBlock DockPanel.Dock="Right" Text="{Binding UnitsText}" FontWeight="SemiBold" Margin="0,0,10,0" />
-                                            <TextBlock Text="{Binding PrefabName}" TextTrimming="CharacterEllipsis" />
+                                            <TextBlock Text="{Binding ShortName}" TextTrimming="CharacterEllipsis" />
                                         </DockPanel>
                                     </DataTemplate>
                                 </ListBox.ItemTemplate>
@@ -127,6 +169,7 @@
                         <DockPanel Grid.Column="2" x:Name="ItemPanel" IsEnabled="False" Margin="6,0,0,0">
                             <StackPanel DockPanel.Dock="Top">
                                 <TextBlock Text="{Binding PrefabName}" FontSize="16" FontWeight="Bold" />
+                                <TextBlock Text="{Binding CategoryName}" Foreground="Gray" />
                                 <StackPanel Orientation="Horizontal" Margin="0,8,0,0"
                                             Visibility="{Binding IsStackable, Converter={StaticResource BoolToVisibility}}">
                                     <TextBlock Text="Quantity" Width="90" VerticalAlignment="Center" />
