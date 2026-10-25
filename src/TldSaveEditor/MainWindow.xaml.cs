@@ -21,6 +21,7 @@ public partial class MainWindow : Window
     private InventoryItem? selectedItem;
 
     private bool isDirty;
+    private bool isBusy;
     private bool ignoreSaveSelection;
     private SaveSlotInfo? currentSlot;
 
@@ -104,7 +105,7 @@ public partial class MainWindow : Window
     private async Task LoadSaveAsync(string path)
     {
         SetStatus($"Loading {path}…");
-        Tabs.IsEnabled = false;
+        SetBusy(true);
         try
         {
             var loaded = await Task.Run(() => SaveFile.Load(path));
@@ -113,6 +114,7 @@ public partial class MainWindow : Window
                 MessageBox.Show(this, $"This is a {loaded.GameMode} save. This editor only edits Survival (SANDBOX) saves.",
                     "Not a survival save", MessageBoxButton.OK, MessageBoxImage.Warning);
                 ClearSave();
+                ForgetSelectedSlot();
                 return;
             }
 
@@ -124,7 +126,6 @@ public partial class MainWindow : Window
             SectionCombo.ItemsSource = save.Sections.Keys.ToList();
             SectionCombo.SelectedIndex = SectionCombo.Items.IndexOf("global");
             SetDirty(false);
-            Tabs.IsEnabled = true;
             SetStatus(SaveLocator.IsGameRunning()
                 ? $"Loaded {path}. The game is running: you can edit, but quit the game before saving."
                 : $"Loaded {path}");
@@ -132,8 +133,35 @@ public partial class MainWindow : Window
         catch (Exception e)
         {
             ClearSave();
+            ForgetSelectedSlot();
             ShowError($"Could not load {path}", e);
         }
+        finally
+        {
+            SetBusy(false);
+        }
+    }
+
+    /// <summary>After a failed load: deselect it, so clicking the same save again retries.</summary>
+    private void ForgetSelectedSlot()
+    {
+        currentSlot = null;
+        ignoreSaveSelection = true;
+        SavesList.SelectedItem = null;
+        ignoreSaveSelection = false;
+    }
+
+    /// <summary>
+    /// Locks the window while a load or save runs in the background: the save data must not be edited while
+    /// another thread reads it, and a second load must not start before the first one finishes.
+    /// </summary>
+    private void SetBusy(bool busy)
+    {
+        isBusy = busy;
+        Toolbar.IsEnabled = !busy;
+        SavesList.IsEnabled = !busy;
+        Tabs.IsEnabled = !busy && save is not null;
+        Mouse.OverrideCursor = busy ? Cursors.Wait : null;
     }
 
     private void ClearSave()
@@ -310,9 +338,17 @@ public partial class MainWindow : Window
     {
         if (save is null || SectionCombo.SelectedItem is not string key) return;
         RawJsonBox.Text = "Loading…";
-        var section = save.Sections[key];
-        var text = await Task.Run(() => TldJson.Serialize(TldJson.Expand(section), indented: true));
-        if (SectionCombo.SelectedItem as string == key) RawJsonBox.Text = text;
+        try
+        {
+            // Copy on the UI thread, so edits made meanwhile can't change the data the background task reads
+            var snapshot = save.Sections[key].DeepClone();
+            var text = await Task.Run(() => TldJson.Serialize(TldJson.Expand(snapshot), indented: true));
+            if (SectionCombo.SelectedItem as string == key) RawJsonBox.Text = text;
+        }
+        catch (Exception ex)
+        {
+            if (SectionCombo.SelectedItem as string == key) RawJsonBox.Text = $"Could not display this section: {ex.Message}";
+        }
     }
 
     // ------------------------------------------------------------ saving
@@ -342,9 +378,9 @@ public partial class MainWindow : Window
             return;
         }
 
+        SetBusy(true);
         try
         {
-            SaveButton.IsEnabled = false;
             SetStatus("Saving…");
             inventory.Commit();
             var target = save;
@@ -362,6 +398,10 @@ public partial class MainWindow : Window
         {
             SetDirty(true);
             ShowError("Save failed. The save file was not modified", ex);
+        }
+        finally
+        {
+            SetBusy(false);
         }
     }
 
@@ -385,6 +425,11 @@ public partial class MainWindow : Window
         {
             // Can happen if the game is writing the save at that exact moment
             ShowError("Backup failed. If the game is saving right now, try again in a few seconds", ex);
+        }
+        catch (Exception ex)
+        {
+            // e.g. UnauthorizedAccessException: read-only or locked (OneDrive) Documents folder
+            ShowError($"Backup failed. Check that you can write to {SaveLocator.BackupFolder}", ex);
         }
     }
 
@@ -413,8 +458,15 @@ public partial class MainWindow : Window
 
     private void OpenBackups_Click(object sender, RoutedEventArgs e)
     {
-        Directory.CreateDirectory(SaveLocator.BackupFolder);
-        System.Diagnostics.Process.Start("explorer.exe", SaveLocator.BackupFolder);
+        try
+        {
+            Directory.CreateDirectory(SaveLocator.BackupFolder);
+            System.Diagnostics.Process.Start("explorer.exe", SaveLocator.BackupFolder);
+        }
+        catch (Exception ex)
+        {
+            ShowError($"Could not open {SaveLocator.BackupFolder}", ex);
+        }
     }
 
     // ------------------------------------------------------------ helpers
@@ -432,6 +484,13 @@ public partial class MainWindow : Window
 
     private void Window_Closing(object? sender, CancelEventArgs e)
     {
+        if (isBusy)
+        {
+            // Never quit in the middle of writing a save
+            SetStatus("Please wait: a save or load is in progress.");
+            e.Cancel = true;
+            return;
+        }
         if (!ConfirmDiscardChanges()) e.Cancel = true;
     }
 

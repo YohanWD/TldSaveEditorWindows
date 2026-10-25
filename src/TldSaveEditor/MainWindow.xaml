@@ -14,7 +14,7 @@
 
     <DockPanel>
         <!-- Toolbar -->
-        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="8">
+        <StackPanel x:Name="Toolbar" DockPanel.Dock="Top" Orientation="Horizontal" Margin="8">
             <Button Content="Refresh" Click="Refresh_Click" />
             <Button Content="Open file…" Click="OpenFile_Click" />
             <Button x:Name="SaveButton" Content="Save (with backup)" Click="Save_Click" IsEnabled="False" FontWeight="Bold" />
