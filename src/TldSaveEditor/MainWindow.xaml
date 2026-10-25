@@ -93,6 +93,167 @@
                     </Grid>
                 </TabItem>
 
+                <!-- Player -->
+                <TabItem Header="Player">
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                        <Grid x:Name="PlayerPanel" Margin="8">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="12" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.Resources>
+                                <Style TargetType="GroupBox">
+                                    <Setter Property="Padding" Value="8" />
+                                    <Setter Property="Margin" Value="0,0,0,10" />
+                                </Style>
+                                <Style TargetType="Slider">
+                                    <Setter Property="VerticalAlignment" Value="Center" />
+                                    <Setter Property="IsMoveToPointEnabled" Value="True" />
+                                    <Setter Property="Margin" Value="6,0" />
+                                </Style>
+                                <Style x:Key="ValueBox" TargetType="TextBox">
+                                    <Setter Property="Width" Value="60" />
+                                    <Setter Property="TextAlignment" Value="Right" />
+                                    <Setter Property="VerticalContentAlignment" Value="Center" />
+                                </Style>
+                            </Grid.Resources>
+
+                            <!-- Left column: status + cheats -->
+                            <StackPanel>
+                                <GroupBox Header="Status">
+                                    <StackPanel>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="170" />
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="Auto" />
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="30" />
+                                                <RowDefinition Height="30" />
+                                                <RowDefinition Height="30" />
+                                                <RowDefinition Height="30" />
+                                                <RowDefinition Height="30" />
+                                            </Grid.RowDefinitions>
+
+                                            <TextBlock Grid.Row="0" Text="Condition %" VerticalAlignment="Center" />
+                                            <Slider Grid.Row="0" Grid.Column="1" Minimum="0" Maximum="{Binding ConditionMax, Mode=OneWay}"
+                                                    Value="{Binding Condition}" />
+                                            <TextBox Grid.Row="0" Grid.Column="2" Style="{StaticResource ValueBox}"
+                                                     Text="{Binding Condition, StringFormat={}{0:0.#}, UpdateSourceTrigger=LostFocus}" />
+
+                                            <TextBlock Grid.Row="1" Text="Calories (0 = starving)" VerticalAlignment="Center" />
+                                            <Slider Grid.Row="1" Grid.Column="1" Minimum="0" Maximum="2500" Value="{Binding Calories}" />
+                                            <TextBox Grid.Row="1" Grid.Column="2" Style="{StaticResource ValueBox}"
+                                                     Text="{Binding Calories, StringFormat={}{0:0}, UpdateSourceTrigger=LostFocus}" />
+
+                                            <TextBlock Grid.Row="2" Text="Thirst (0 = hydrated)" VerticalAlignment="Center" />
+                                            <Slider Grid.Row="2" Grid.Column="1" Minimum="0" Maximum="100" Value="{Binding Thirst}" />
+                                            <TextBox Grid.Row="2" Grid.Column="2" Style="{StaticResource ValueBox}"
+                                                     Text="{Binding Thirst, StringFormat={}{0:0.#}, UpdateSourceTrigger=LostFocus}" />
+
+                                            <TextBlock Grid.Row="3" Text="Fatigue (0 = rested)" VerticalAlignment="Center" />
+                                            <Slider Grid.Row="3" Grid.Column="1" Minimum="0" Maximum="100" Value="{Binding Fatigue}" />
+                                            <TextBox Grid.Row="3" Grid.Column="2" Style="{StaticResource ValueBox}"
+                                                     Text="{Binding Fatigue, StringFormat={}{0:0.#}, UpdateSourceTrigger=LostFocus}" />
+
+                                            <TextBlock Grid.Row="4" Text="Freezing (0 = warm)" VerticalAlignment="Center" />
+                                            <Slider Grid.Row="4" Grid.Column="1" Minimum="0" Maximum="100" Value="{Binding Freezing}" />
+                                            <TextBox Grid.Row="4" Grid.Column="2" Style="{StaticResource ValueBox}"
+                                                     Text="{Binding Freezing, StringFormat={}{0:0.#}, UpdateSourceTrigger=LostFocus}" />
+                                        </Grid>
+                                        <CheckBox Margin="0,8,0,0" IsChecked="{Binding WellFed}"
+                                                  Content="Well Fed (+5 max condition)" />
+                                        <Button Margin="0,10,0,0" HorizontalAlignment="Left" Click="RestoreAll_Click"
+                                                Content="Restore all: full health, fed, hydrated, rested, warm" />
+                                    </StackPanel>
+                                </GroupBox>
+
+                                <GroupBox Header="Cheats">
+                                    <StackPanel>
+                                        <CheckBox IsChecked="{Binding Invulnerable}" Content="Invulnerable" />
+                                        <CheckBox IsChecked="{Binding NeverDie}" Content="Never die" Margin="0,4,0,0" />
+                                        <TextBlock Foreground="Gray" Margin="0,6,0,0" TextWrapping="Wrap"
+                                                   Text="Flags from the original editor. Not tested in game." />
+                                    </StackPanel>
+                                </GroupBox>
+                            </StackPanel>
+
+                            <!-- Right column: skills + afflictions -->
+                            <StackPanel Grid.Column="2">
+                                <GroupBox Header="Skills">
+                                    <StackPanel>
+                                        <ItemsControl ItemsSource="{Binding Skills}">
+                                            <ItemsControl.ItemTemplate>
+                                                <DataTemplate>
+                                                    <Grid Height="30" IsEnabled="{Binding Exists}">
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="130" />
+                                                            <ColumnDefinition Width="*" />
+                                                            <ColumnDefinition Width="Auto" />
+                                                            <ColumnDefinition Width="100" />
+                                                            <ColumnDefinition Width="Auto" />
+                                                        </Grid.ColumnDefinitions>
+                                                        <TextBlock Text="{Binding Name}" VerticalAlignment="Center" />
+                                                        <Slider Grid.Column="1" Minimum="0" Maximum="{Binding MaxPoints}"
+                                                                Value="{Binding Points}" IsSnapToTickEnabled="True" TickFrequency="1" />
+                                                        <TextBlock Grid.Column="2" VerticalAlignment="Center" Foreground="Gray">
+                                                            <Run Text="{Binding Points, Mode=OneWay}" /> / <Run Text="{Binding MaxPoints, Mode=OneWay}" />
+                                                        </TextBlock>
+                                                        <TextBlock Grid.Column="3" Text="{Binding LevelText}" VerticalAlignment="Center"
+                                                                   Margin="8,0,0,0" />
+                                                        <Button Grid.Column="4" Content="Max" Click="MaxSkill_Click" Margin="0" Padding="8,1" />
+                                                    </Grid>
+                                                </DataTemplate>
+                                            </ItemsControl.ItemTemplate>
+                                        </ItemsControl>
+                                        <Button Margin="0,8,0,0" HorizontalAlignment="Left" Content="Max all skills (level 5)"
+                                                Click="MaxAllSkills_Click" />
+                                        <TextBlock Foreground="Gray" Margin="0,6,0,0" TextWrapping="Wrap"
+                                                   Text="Skills are stored as points. Level 5 = the max shown. Lower level thresholds are only known for Fire starting and Cooking." />
+                                    </StackPanel>
+                                </GroupBox>
+
+                                <GroupBox Header="Afflictions">
+                                    <StackPanel>
+                                        <ItemsControl ItemsSource="{Binding Afflictions}">
+                                            <ItemsControl.ItemTemplate>
+                                                <DataTemplate>
+                                                    <Grid Height="26">
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="170" />
+                                                            <ColumnDefinition Width="*" />
+                                                            <ColumnDefinition Width="Auto" />
+                                                        </Grid.ColumnDefinitions>
+                                                        <TextBlock Text="{Binding Name}" VerticalAlignment="Center" />
+                                                        <TextBlock Grid.Column="1" Text="{Binding StatusText}" VerticalAlignment="Center">
+                                                            <TextBlock.Style>
+                                                                <Style TargetType="TextBlock">
+                                                                    <Setter Property="Foreground" Value="Gray" />
+                                                                    <Style.Triggers>
+                                                                        <DataTrigger Binding="{Binding IsActive}" Value="True">
+                                                                            <Setter Property="Foreground" Value="Firebrick" />
+                                                                            <Setter Property="FontWeight" Value="SemiBold" />
+                                                                        </DataTrigger>
+                                                                    </Style.Triggers>
+                                                                </Style>
+                                                            </TextBlock.Style>
+                                                        </TextBlock>
+                                                        <Button Grid.Column="2" Content="Cure" Click="Cure_Click" Margin="0" Padding="8,1"
+                                                                IsEnabled="{Binding IsActive}" />
+                                                    </Grid>
+                                                </DataTemplate>
+                                            </ItemsControl.ItemTemplate>
+                                        </ItemsControl>
+                                        <Button Margin="0,8,0,0" HorizontalAlignment="Left" Content="Cure all" Click="CureAll_Click" />
+                                    </StackPanel>
+                                </GroupBox>
+                            </StackPanel>
+                        </Grid>
+                    </ScrollViewer>
+                </TabItem>
+
                 <!-- Inventory -->
                 <TabItem Header="Inventory">
                     <Grid Margin="8">

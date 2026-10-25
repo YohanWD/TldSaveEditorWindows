@@ -15,6 +15,7 @@ public partial class MainWindow : Window
 {
     private SaveFile? save;
     private Inventory? inventory;
+    private PlayerState? player;
     private readonly ObservableCollection<InventoryItem> items = new();
     private InventoryItem? selectedItem;
 
@@ -117,6 +118,7 @@ public partial class MainWindow : Window
             save = loaded;
             inventory = Inventory.Load(save);
             ShowOverview();
+            ShowPlayer();
             ShowInventory();
             SectionCombo.ItemsSource = save.Sections.Keys.ToList();
             SectionCombo.SelectedIndex = SectionCombo.Items.IndexOf("global");
@@ -135,6 +137,7 @@ public partial class MainWindow : Window
     {
         save = null;
         inventory = null;
+        ShowPlayer();
         items.Clear();
         SectionCombo.ItemsSource = null;
         RawJsonBox.Text = "";
@@ -264,6 +267,38 @@ public partial class MainWindow : Window
         inventory.Remove(item);
         items.Remove(item);
         SetDirty(true);
+    }
+
+    // ------------------------------------------------------------ player
+
+    private void ShowPlayer()
+    {
+        if (player is not null) player.PropertyChanged -= Player_PropertyChanged;
+        player = save is null ? null : new PlayerState(save);
+        if (player is not null) player.PropertyChanged += Player_PropertyChanged;
+        PlayerPanel.DataContext = player;
+    }
+
+    private void Player_PropertyChanged(object? sender, PropertyChangedEventArgs e)
+    {
+        SetDirty(true);
+        ShowOverview(); // condition is shown there too
+    }
+
+    private void RestoreAll_Click(object sender, RoutedEventArgs e) => player?.RestoreAll();
+
+    private void MaxAllSkills_Click(object sender, RoutedEventArgs e) => player?.MaxAllSkills();
+
+    private void CureAll_Click(object sender, RoutedEventArgs e) => player?.CureAll();
+
+    private void MaxSkill_Click(object sender, RoutedEventArgs e)
+    {
+        if ((sender as FrameworkElement)?.DataContext is Skill skill) skill.Points = skill.MaxPoints;
+    }
+
+    private void Cure_Click(object sender, RoutedEventArgs e)
+    {
+        if ((sender as FrameworkElement)?.DataContext is Affliction affliction) affliction.Cure();
     }
 
     // ------------------------------------------------------------ raw JSON

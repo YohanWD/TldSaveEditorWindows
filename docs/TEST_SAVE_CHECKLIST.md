@@ -34,3 +34,25 @@ Quit the game completely before starting, then launch it and load **EDITOR TEST*
 - [ ] Edit something small again, save, and reload in game
 
 Write down anything missing, renamed, or that behaves oddly (item name + what happened).
+
+---
+
+# In-game test: "PLAYER TEST" save (sandbox5)
+
+A copy of EDITOR TEST with these Player tab values set. Delete `sandbox5` when done.
+
+## Status (validated in game 2026-10-25)
+- [x] The load menu shows condition **60%**
+- [x] In game: condition **60%**, **very thirsty** (thirst 80), **rested**, **warm**, low calories (500 kcal, starving soon)
+- [x] **Well Fed is off**. It was on in EDITOR TEST.
+
+## Skills (validated in game 2026-10-25)
+- [x] **Cooking: level 3** (80 points, was level 5)
+- [x] **Mending: level 5** (350 points, was 192)
+- [x] The other skills are unchanged (level 5)
+
+## Afflictions
+No afflictions were active in this save, so to test curing:
+- [ ] Get an affliction in game (eat raw/ruined food, jump from a ledge for a sprain…), save, quit the game
+- [ ] Open PLAYER TEST in the editor: Player tab, the affliction shows **Active** in red
+- [ ] Click **Cure**, save, launch the game: the affliction is gone from the First Aid panel

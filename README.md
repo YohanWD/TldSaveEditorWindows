@@ -2,19 +2,48 @@
 
 Editor for The Long Dark **Survival mode** saves (`%LOCALAPPDATA%\Hinterland\TheLongDark\Survival\sandbox*`).
 
+Based on [TLD-Save-Editor-3](https://github.com/FINDarkside/TLD-Save-Editor-3) by FINDarkside (TypeScript / Vue / Electron).
+This is a C# / WPF rewrite of its save format logic: LZF compression, nested JSON sections, the inventory
+structure and the original item list.
+
 ```
 dotnet run --project src/TldSaveEditor
 ```
 
 Or open `TldSaveEditor.slnx` in Visual Studio. Requires the .NET 10 SDK.
 
+## Building the exe to share
+
+```
+dotnet publish src/TldSaveEditor -p:PublishProfile=win-x64
+```
+
+This produces a single `publish\win-x64\TldSaveEditor.exe` (~62 MB). It includes the .NET runtime, so the
+person running it doesn't need to install anything. It runs on 64-bit Windows 10/11.
+
+To share it, zip the exe with this README and `THIRD_PARTY_NOTICES.md`. The MIT license of the original
+editor requires its notice to be included.
+
+Before publishing, bump `<Version>` in `src/TldSaveEditor/TldSaveEditor.csproj`. The exe is not code-signed,
+so Windows SmartScreen shows "Windows protected your PC" the first time. Click *More info*, then *Run anyway*.
+
 ## Projects
 
 | Project | What it does |
 |---|---|
-| `src/TldSave.Core` | Save file library, no UI. `Lzf` (compression), `TldJson` (JSON with NaN/Infinity and nested JSON strings), `SaveFile` (load/save), `Inventory`, `SaveLocator` (find saves, backups) |
-| `src/TldSaveEditor` | WPF app: save list, Overview, Inventory (condition, add/remove, raw gear JSON), Raw JSON viewer |
+| `src/TldSave.Core` | Save file library, no UI. `Lzf` (compression), `TldJson` (JSON with NaN/Infinity and nested JSON strings), `SaveFile` (load/save), `Inventory`, `PlayerState` (status, skills, afflictions), `ItemCatalog`, `SaveLocator` (find saves, backups) |
+| `src/TldSaveEditor` | WPF app: save list, Overview, Player (status, skills, afflictions), Inventory (quantity, condition, add/remove, raw gear JSON), Raw JSON viewer |
 | `tools/CatalogBuilder` | Generates `ItemCatalog.json` from the saves on this PC (see below) |
+
+## Player tab
+
+| Value | Save field (in `global`) | Meaning |
+|---|---|---|
+| Condition | `m_Condition_Serialized.m_CurrentHPProxy` | 0–100, up to 105 with Well Fed. Also copied to `info.m_Condition`, which the load menu shows |
+| Calories | `m_Hunger_Serialized.m_CurrentReserveCaloriesProxy` | Reserve kcal (max 2500), 0 = starving |
+| Thirst / Fatigue / Freezing | `m_Thirst_Serialized`, `m_Fatigue_Serialized`, `m_Freezing_Serialized` | **0 = best**, 100 = worst (a brand-new game starts at ~0) |
+| Skills | `m_SkillsManagerSerialized.m_Skill_*Serialized.m_Points` | Points. Level 5 = 200 fire, 350 cooking, 250 ice fishing, 125 archery, 350 mending, 100 for the others |
+| Afflictions | `m_SprainedAnkleSerialized`, `m_BurnsSerialized`, ... | Wounds are parallel lists (cure = empty them); others use an `m_Active` flag |
 
 ## Item catalog ("Add item…")
 
@@ -52,4 +81,6 @@ the edited file on its next save.
 - Load and save were checked against 22 real saves: decoded data is identical after a round trip.
 - Validated in game (2026-10-25) with [docs/TEST_SAVE_CHECKLIST.md](docs/TEST_SAVE_CHECKLIST.md): 66 added items
   of every component type, quantity / condition / remove edits, then a game save, reload and re-edit. No issues.
+- Player tab validated in game (2026-10-25): status meters, Well Fed and skill levels. Curing afflictions
+  is not tested in game yet. It was only checked against healthy saves' data.
 - A custom prefab name typed in "Add item" is not validated, and the game may drop a wrong one.
