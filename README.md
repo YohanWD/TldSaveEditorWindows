@@ -6,6 +6,8 @@ A save editor for **The Long Dark, Survival mode**, for Windows.
 - **Inventory:** change quantities and condition, remove items, and add new items from a list of 440+ game items
 - **Overview:** experience mode, region, days survived
 - Makes a backup before every save, so you can always roll back
+- **Backup now:** a one-click snapshot of a save before something risky in game, without editing it
+- **Restore backup…:** put any backup back, with a warning before anything is overwritten
 
 Based on [TLD-Save-Editor-3](https://github.com/FINDarkside/TLD-Save-Editor-3) by FINDarkside. This is a C# / WPF
 rewrite of its save format logic: LZF compression, nested JSON sections, the inventory structure and the
@@ -86,21 +88,48 @@ If your saves are somewhere else, use **Open file…** in the editor to pick one
 
 ## Backups and rolling back
 
-Every time you click **Save**, the file as it was **before** your change is copied to:
+All backups go to:
 
 ```
 Documents\TldSaveEditor\Backups\
 ```
 
-Backups are named after the save and the date and time, e.g. `sandbox1_20261025_143000`. Nothing is ever
-deleted there; clean the folder yourself when you no longer need old backups.
+**Open backups folder** in the editor's toolbar opens it. Nothing is ever deleted there; clean the folder
+yourself when you no longer need old backups.
 
-**To roll back to a backup:**
-1. Quit the game completely.
-2. In the backup folder, find the backup you want (check the date and time in its name).
-3. Copy it into the save folder (`%LOCALAPPDATA%\Hinterland\TheLongDark\Survival\`).
-4. Rename it to the original save name, e.g. `sandbox1_20261025_143000` → `sandbox1`, replacing the existing file.
-5. Start the game.
+| Backup | When | Name |
+|---|---|---|
+| Before edit | Every time you click **Save**, the file as it was **before** your change | `sandbox1_20261025_143000` |
+| Manual | When you click **Backup now** | `sandbox1_20261025_143000_manual` |
+| Before restore | When you restore a backup, the file it replaces | `sandbox1_20261025_143000_before-restore` |
+
+A backup is never overwritten: if two are made in the same second, the second one gets `_2`.
+
+### Quick backup before something risky
+
+About to cross thin ice, fight a bear, or try something you might regret? Take a snapshot first:
+
+1. Open the editor. The game can stay open.
+2. Select your save in the list and click **Backup now**.
+
+This only copies the save file and changes nothing. It copies **the game's last save**: the game writes the
+file when you sleep, change area, or quit. If you want the backup to include your latest progress, trigger a
+save in game first (e.g. pass time or go through a door), then click Backup now.
+
+### Restoring a backup
+
+1. Quit the game completely. The editor refuses to restore while the game is running, because the game
+   would overwrite the restored file.
+2. Click **Restore backup…**. The list shows every backup, newest first, with its type, its in-game name and
+   when the game last saved it. Use the *Save* box to show only one save's backups.
+3. Select a backup and click **Restore…**.
+4. If the save file already exists, a **warning shows exactly which file will be overwritten**, with its
+   in-game name and date. Nothing is replaced unless you click **Yes**.
+5. The file being replaced is backed up first (*Before restore*), so a restore can be undone the same way.
+
+**Restoring by hand** (if you can't use the editor): quit the game, copy the backup into
+`%LOCALAPPDATA%\Hinterland\TheLongDark\Survival\`, and rename it to the save name (e.g.
+`sandbox1_20261025_143000_manual` → `sandbox1`), replacing the existing file.
 
 **Tip:** before your first edit, also make your own copy of the save file somewhere safe.
 

@@ -1,5 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -337,6 +338,58 @@ public partial class MainWindow : Window
             SetDirty(true);
             ShowError("Save failed — the original file was backed up first if the error happened while writing", ex);
         }
+    }
+
+    // ------------------------------------------------------------ backups
+
+    private void BackupNow_Click(object sender, RoutedEventArgs e)
+    {
+        var path = (SavesList.SelectedItem as SaveSlotInfo)?.FilePath ?? save?.FilePath;
+        if (path is null)
+        {
+            MessageBox.Show(this, "Select a save in the list first.", "Backup now");
+            return;
+        }
+        try
+        {
+            var backup = SaveLocator.Backup(path, "manual");
+            var note = isDirty ? " Your unsaved edits are not included: this is the file as it is on disk." : "";
+            SetStatus($"Backup created: {backup}.{note}");
+        }
+        catch (IOException ex)
+        {
+            // Can happen if the game is writing the save at that exact moment
+            ShowError("Backup failed. If the game is saving right now, try again in a few seconds", ex);
+        }
+    }
+
+    private async void RestoreBackup_Click(object sender, RoutedEventArgs e)
+    {
+        // A restore may replace the save that is open here
+        if (!ConfirmDiscardChanges()) return;
+
+        var selected = (SavesList.SelectedItem as SaveSlotInfo)?.FileName;
+        var dialog = new RestoreBackupWindow(selected) { Owner = this };
+        if (dialog.ShowDialog() != true || dialog.RestoredSavePath is not { } restored) return;
+
+        var wasOpen = string.Equals(save?.FilePath, restored, StringComparison.OrdinalIgnoreCase);
+        SetDirty(false);
+        RefreshSaveList();
+        if (wasOpen)
+        {
+            await LoadSaveAsync(restored);
+            SetStatus($"Restored and reloaded {restored}");
+        }
+        else
+        {
+            SetStatus($"Restored {restored}");
+        }
+    }
+
+    private void OpenBackups_Click(object sender, RoutedEventArgs e)
+    {
+        Directory.CreateDirectory(SaveLocator.BackupFolder);
+        System.Diagnostics.Process.Start("explorer.exe", SaveLocator.BackupFolder);
     }
 
     // ------------------------------------------------------------ helpers

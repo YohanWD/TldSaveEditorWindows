@@ -1,0 +1,43 @@
+<Window x:Class="TldSaveEditor.RestoreBackupWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Restore a backup" Height="520" Width="820"
+        WindowStartupLocation="CenterOwner" ShowInTaskbar="False">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Padding" Value="14,3" />
+            <Setter Property="Margin" Value="6,0,0,0" />
+        </Style>
+    </Window.Resources>
+
+    <DockPanel Margin="10">
+        <DockPanel DockPanel.Dock="Top" Margin="0,0,0,8">
+            <TextBlock Text="Save " VerticalAlignment="Center" />
+            <ComboBox x:Name="SaveFilter" Width="160" SelectionChanged="SaveFilter_SelectionChanged" />
+            <TextBlock x:Name="FolderText" Foreground="Gray" VerticalAlignment="Center" Margin="12,0,0,0"
+                       TextTrimming="CharacterEllipsis" />
+        </DockPanel>
+
+        <DockPanel DockPanel.Dock="Bottom" Margin="0,8,0,0">
+            <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" VerticalAlignment="Bottom">
+                <Button x:Name="RestoreButton" Content="Restore…" Click="Restore_Click" FontWeight="Bold" IsEnabled="False" />
+                <Button Content="Close" IsCancel="True" />
+            </StackPanel>
+            <TextBlock x:Name="DetailsText" TextWrapping="Wrap" Foreground="Gray" />
+        </DockPanel>
+
+        <ListView x:Name="BackupsList" SelectionMode="Single" SelectionChanged="BackupsList_SelectionChanged"
+                  MouseDoubleClick="BackupsList_MouseDoubleClick">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Backup taken" Width="140" DisplayMemberBinding="{Binding CreatedText}" />
+                    <GridViewColumn Header="Type" Width="100" DisplayMemberBinding="{Binding Kind}" />
+                    <GridViewColumn Header="Save file" Width="90" DisplayMemberBinding="{Binding SaveFileName}" />
+                    <GridViewColumn Header="In-game name" Width="160" DisplayMemberBinding="{Binding DisplayNameText}" />
+                    <GridViewColumn Header="Game last saved" Width="150" DisplayMemberBinding="{Binding GameTimestamp}" />
+                    <GridViewColumn Header="Backup file" Width="250" DisplayMemberBinding="{Binding FileName}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </DockPanel>
+</Window>

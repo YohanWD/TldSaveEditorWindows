@@ -18,6 +18,11 @@
             <Button Content="Refresh" Click="Refresh_Click" />
             <Button Content="Open file…" Click="OpenFile_Click" />
             <Button x:Name="SaveButton" Content="Save (with backup)" Click="Save_Click" IsEnabled="False" FontWeight="Bold" />
+            <Separator Margin="6,0,12,0" />
+            <Button Content="Backup now" Click="BackupNow_Click"
+                    ToolTip="Copy the selected save file to the backup folder, without changing it. Safe while the game is running: it copies the game's last save." />
+            <Button Content="Restore backup…" Click="RestoreBackup_Click" />
+            <Button Content="Open backups folder" Click="OpenBackups_Click" />
         </StackPanel>
 
         <StatusBar DockPanel.Dock="Bottom">

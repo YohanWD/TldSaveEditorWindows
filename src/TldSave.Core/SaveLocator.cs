@@ -48,12 +48,97 @@ public static partial class SaveLocator
         return result;
     }
 
-    /// <summary>Copies the save to Documents\TldSaveEditor\Backups and returns the backup path.</summary>
-    public static string Backup(string savePath)
+    /// <summary>
+    /// Copies the save to Documents\TldSaveEditor\Backups and returns the backup path:
+    /// sandbox1_20261025_143000, or sandbox1_20261025_143000_manual with a label.
+    /// Never overwrites an existing backup: a counter is added instead (..._manual_2).
+    /// </summary>
+    public static string Backup(string savePath, string? label = null)
     {
         Directory.CreateDirectory(BackupFolder);
-        var backup = Path.Combine(BackupFolder, $"{Path.GetFileName(savePath)}_{DateTime.Now:yyyyMMdd_HHmmss}");
-        File.Copy(savePath, backup, overwrite: true);
+        var suffix = string.IsNullOrEmpty(label) ? "" : "_" + label;
+        var baseName = $"{Path.GetFileName(savePath)}_{DateTime.Now:yyyyMMdd_HHmmss}{suffix}";
+
+        var backup = Path.Combine(BackupFolder, baseName);
+        for (var n = 2; File.Exists(backup); n++)
+            backup = Path.Combine(BackupFolder, $"{baseName}_{n}");
+
+        File.Copy(savePath, backup, overwrite: false);
         return backup;
     }
+
+    // ------------------------------------------------------------------ restore
+
+    // sandbox1_20261025_143000, sandbox1_20261025_143000_manual, sandbox1_20261025_143000_manual_2
+    [GeneratedRegex(@"^(?<save>sandbox[0-9]+)_(?<date>\d{8}_\d{6})(?:_(?<label>[A-Za-z][A-Za-z-]*))?(?:_(?<n>\d+))?$")]
+    private static partial Regex BackupNameRegex();
+
+    /// <summary>Survival save backups in the backup folder, newest first.</summary>
+    public static List<BackupInfo> FindBackups()
+    {
+        var result = new List<BackupInfo>();
+        if (!Directory.Exists(BackupFolder)) return result;
+
+        foreach (var file in Directory.EnumerateFiles(BackupFolder))
+        {
+            var match = BackupNameRegex().Match(Path.GetFileName(file));
+            if (!match.Success) continue;
+
+            var created = DateTime.ParseExact(match.Groups["date"].Value, "yyyyMMdd_HHmmss", null);
+            var kind = match.Groups["label"].Value switch
+            {
+                "" => "Before edit",
+                "manual" => "Manual",
+                "before-restore" => "Before restore",
+                var other => other,
+            };
+
+            string? displayName = null, gameTimestamp = null;
+            var valid = false;
+            try
+            {
+                var header = SaveFile.ReadHeader(file);
+                displayName = (string?)header["m_DisplayName"];
+                gameTimestamp = (string?)header["m_Timestamp"];
+                valid = (string?)header["m_GameMode"] == SurvivalGameMode;
+            }
+            catch (Exception) { /* listed as unreadable */ }
+
+            result.Add(new BackupInfo(file, match.Groups["save"].Value, created, kind, displayName, gameTimestamp, valid));
+        }
+        return result.OrderByDescending(b => b.Created).ThenByDescending(b => b.FilePath).ToList();
+    }
+
+    /// <summary>The save file a backup restores to, e.g. ...\Survival\sandbox1.</summary>
+    public static string RestoreTarget(BackupInfo backup) => Path.Combine(SurvivalFolder, backup.SaveFileName);
+
+    /// <summary>
+    /// Restores a backup over its save file. If that file exists it is first backed up ("before-restore"),
+    /// and that backup's path is returned. The caller must have asked the user before calling this.
+    /// </summary>
+    public static string? Restore(BackupInfo backup)
+    {
+        if (!backup.IsValid) throw new InvalidOperationException($"{backup.FileName} is not a readable survival save.");
+        if (IsGameRunning()) throw new InvalidOperationException("The Long Dark is running. Quit the game completely first.");
+
+        var target = RestoreTarget(backup);
+        var safetyBackup = File.Exists(target) ? Backup(target, "before-restore") : null;
+
+        Directory.CreateDirectory(SurvivalFolder);
+        File.Copy(backup.FilePath, target, overwrite: true);
+        return safetyBackup;
+    }
+
+    /// <summary>True if The Long Dark is running (it would overwrite a restored save).</summary>
+    public static bool IsGameRunning() =>
+        new[] { "tld", "TheLongDark" }.Any(name => System.Diagnostics.Process.GetProcessesByName(name).Length > 0);
+}
+
+public sealed record BackupInfo(
+    string FilePath, string SaveFileName, DateTime Created, string Kind,
+    string? DisplayName, string? GameTimestamp, bool IsValid)
+{
+    public string FileName => Path.GetFileName(FilePath);
+    public string CreatedText => Created.ToString("yyyy-MM-dd HH:mm:ss");
+    public string DisplayNameText => IsValid ? DisplayName ?? "" : "(unreadable)";
 }
