@@ -6,13 +6,14 @@ public sealed record SaveSlotInfo(string FilePath, string FileName, string Displ
 
 public static partial class SaveLocator
 {
-    public static string SaveFolder { get; } =
+    // The setters exist only so tests can point these at temp folders instead of the user's real ones.
+    public static string SaveFolder { get; internal set; } =
         Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Hinterland", "TheLongDark");
 
     /// <summary>Current game versions keep Survival mode saves here.</summary>
-    public static string SurvivalFolder { get; } = Path.Combine(SaveFolder, "Survival");
+    public static string SurvivalFolder => Path.Combine(SaveFolder, "Survival");
 
-    public static string BackupFolder { get; } =
+    public static string BackupFolder { get; internal set; } =
         Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "TldSaveEditor", "Backups");
 
     // Survival mode saves are named sandbox1, sandbox2, ... and have m_GameMode = SANDBOX
@@ -84,7 +85,9 @@ public static partial class SaveLocator
             var match = BackupNameRegex().Match(Path.GetFileName(file));
             if (!match.Success) continue;
 
-            var created = DateTime.ParseExact(match.Groups["date"].Value, "yyyyMMdd_HHmmss", null);
+            // The name pattern accepts any digits (e.g. month 13): skip files whose date isn't real
+            if (!DateTime.TryParseExact(match.Groups["date"].Value, "yyyyMMdd_HHmmss", null,
+                    System.Globalization.DateTimeStyles.None, out var created)) continue;
             var kind = match.Groups["label"].Value switch
             {
                 "" => "Before edit",
@@ -111,6 +114,25 @@ public static partial class SaveLocator
 
     /// <summary>The save file a backup restores to, e.g. ...\Survival\sandbox1.</summary>
     public static string RestoreTarget(BackupInfo backup) => Path.Combine(SurvivalFolder, backup.SaveFileName);
+
+    /// <summary>In-game name of a save file, or null if it doesn't exist or can't be read.</summary>
+    public static string? ReadDisplayName(string savePath)
+    {
+        if (!File.Exists(savePath)) return null;
+        try { return (string?)SaveFile.ReadHeader(savePath)["m_DisplayName"]; }
+        catch (Exception) { return null; }
+    }
+
+    /// <summary>
+    /// True if the save the backup would replace is a different run (different in-game name). Happens when a run
+    /// was deleted in game and a new one reused its slot (sandbox1), or when the backup came from a copy of
+    /// another save that had the same file name.
+    /// </summary>
+    public static bool IsDifferentRun(BackupInfo backup)
+    {
+        var current = ReadDisplayName(RestoreTarget(backup));
+        return current is not null && backup.DisplayName is not null && current != backup.DisplayName;
+    }
 
     /// <summary>
     /// Restores a backup over its save file. If that file exists it is first backed up ("before-restore"),

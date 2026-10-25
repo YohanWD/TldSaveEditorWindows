@@ -135,6 +135,10 @@ save in game first (e.g. pass time or go through a door), then click Backup now.
    in-game name and date. Nothing is replaced unless you click **Yes**.
 5. The file being replaced is backed up first (*Before restore*), so a restore can be undone the same way.
 
+**Different run warning:** backups are matched to saves by slot name (`sandbox1`). If you deleted a run in game
+and started a new one, the new run can reuse the same slot. When a backup's in-game name differs from the save
+it would replace, the editor shows a **DIFFERENT RUN** warning, so you don't replace your new run by mistake.
+
 **Restoring by hand** (if you can't use the editor): quit the game, copy the backup into
 `%LOCALAPPDATA%\Hinterland\TheLongDark\Survival\`, and rename it to the save name (e.g.
 `sandbox1_20261025_143000_manual` → `sandbox1`), replacing the existing file.
@@ -243,10 +247,12 @@ request that updates the SHAs and their version comments. Review and merge it.
 dotnet test tests/TldSave.Core.Tests
 ```
 
-`tests/TldSave.Core.Tests` (xUnit, ~70 tests, ~10 s) covers LZF, JSON (NaN/Infinity, dates, depth limit),
+`tests/TldSave.Core.Tests` (xUnit, ~75 tests, ~10 s) covers LZF, JSON (NaN/Infinity, dates, depth limit),
 save/load (only edited sections rewritten, crash-safe writes, changed-on-disk detection), inventory, player
-state and the item catalog. They run on two real survival saves in `Fixtures/`: `sandbox1_GoDLC` (small) and
-`sandbox3_1000Days` (13 MB, day 323). Both were checked for personal data: none, only game state. Tests never
+state, the item catalog, and backup / restore (on temp folders, never your real ones). **Close the game before
+running the tests:** the restore tests fail while `tld.exe` is running, like the real Restore button. They run on two real survival saves in `Fixtures/`: `sandbox1_GoDLC` (small) and
+`sandbox3_1000Days` (13 MB, day 323). Both were checked for personal data: none, only game state.
+Don't replace them unless the save format changes (see [Fixtures/README.md](tests/TldSave.Core.Tests/Fixtures/README.md)). Tests never
 touch your real save folder; they work on copies in a temp folder.
 
 The release workflow runs the tests before publishing: **a failing test blocks the release.**

@@ -12,17 +12,23 @@ public partial class App : Application
         // Last safety net: an unexpected error shows a message instead of closing the editor,
         // so unsaved edits are not lost. Async handlers' exceptions also end up here.
         DispatcherUnhandledException += OnUnhandledException;
-        // Exceptions from background tasks nobody awaited: don't let them crash the app later
-        TaskScheduler.UnobservedTaskException += (_, e) => e.SetObserved();
+        // Exceptions from background tasks nobody awaited: log them instead of crashing the app later
+        TaskScheduler.UnobservedTaskException += (_, e) =>
+        {
+            WriteErrorLog(e.Exception);
+            e.SetObserved();
+        };
     }
 
     private static void OnUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
     {
         e.Handled = true;
         var log = WriteErrorLog(e.Exception);
+        // The failed action may have stopped halfway (e.g. Cure all after 5 of 15): don't encourage saving blindly
         MessageBox.Show(
             $"Unexpected error:\n\n{e.Exception.GetType().Name}: {e.Exception.Message}\n\n" +
-            "The editor stays open and your edits are still there. Check them, then save as usual." +
+            "The editor stays open, but the action that failed may have been only partly applied.\n" +
+            "Check your edits. If anything looks wrong, reload the save (select it again in the list) instead of saving." +
             (log is null ? "" : $"\n\nDetails were written to:\n{log}"),
             "TLD Save Editor", MessageBoxButton.OK, MessageBoxImage.Error);
     }

@@ -48,6 +48,8 @@ public partial class RestoreBackupWindow : Window
         DetailsText.Text = File.Exists(target)
             ? $"Restores to {target}.\nThat file exists and will be replaced. It is backed up first, so you can undo this."
             : $"Restores to {target}. No file has that name, so it will be created.";
+        if (SaveLocator.IsDifferentRun(backup))
+            DetailsText.Text = DifferentRunWarning(backup, target) + "\n" + DetailsText.Text;
     }
 
     private void BackupsList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -87,6 +89,11 @@ public partial class RestoreBackupWindow : Window
         }
     }
 
+    private static string DifferentRunWarning(BackupInfo backup, string target) =>
+        $"⚠⚠ DIFFERENT RUN: this backup is \"{backup.DisplayName}\", but {Path.GetFileName(target)} is currently " +
+        $"\"{SaveLocator.ReadDisplayName(target)}\". Restoring replaces that run with another one. " +
+        "This happens when a run was deleted in game and a new one took its slot.";
+
     private bool Confirm(BackupInfo backup, string target)
     {
         string message;
@@ -106,6 +113,8 @@ public partial class RestoreBackupWindow : Window
             message = $"⚠ This will OVERWRITE an existing save file:\n\n{target}\n({current})\n\n" +
                       $"It will be replaced by the backup \"{backup.DisplayName}\" taken {backup.CreatedText}.\n\n" +
                       "The current file is backed up first (\"before restore\"), so you can undo this.\n\nContinue?";
+            if (SaveLocator.IsDifferentRun(backup))
+                message = DifferentRunWarning(backup, target) + "\n\n" + message;
         }
         else
         {
