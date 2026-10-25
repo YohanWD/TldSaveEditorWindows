@@ -15,6 +15,11 @@ original item list.
 
 > ⚠️ **Always quit The Long Dark completely before editing a save.** See [why](#why-the-game-must-be-closed).
 
+*The Long Dark is a trademark of Hinterland Studio Inc. This is an unofficial fan-made tool, not affiliated with
+or endorsed by Hinterland Studio. Use at your own risk and keep backups of your saves.*
+
+Licensed under the [MIT License](LICENSE). Third-party notices: [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
 ---
 
 ## Download

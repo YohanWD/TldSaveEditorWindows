@@ -56,7 +56,7 @@ jobs:
       - name: Zip
         shell: pwsh
         run: |
-          Compress-Archive -Path publish/win-x64/TldSaveEditor.exe, README.md, THIRD_PARTY_NOTICES.md `
+          Compress-Archive -Path publish/win-x64/TldSaveEditor.exe, README.md, LICENSE, THIRD_PARTY_NOTICES.md `
             -DestinationPath "publish/TldSaveEditor-${{ steps.version.outputs.version }}-win-x64.zip"
 
       # The exe on its own, for test builds (Actions tab > run > Artifacts)
