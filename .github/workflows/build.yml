@@ -1,0 +1,61 @@
+# Builds the single-file TldSaveEditor.exe.
+# - Pushing a tag like v1.2.0: build and create a GitHub Release with the zip, using the tag as version.
+# - "Run workflow" button (Actions tab): test build only, exe attached to the run under Artifacts.
+
+name: Build
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: write # needed to create releases
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Version
+        id: version
+        shell: pwsh
+        run: |
+          if ("${{ github.ref_type }}" -eq "tag") {
+            $version = "${{ github.ref_name }}".TrimStart("v")
+            "args=-p:Version=$version" >> $env:GITHUB_OUTPUT
+          } else {
+            $version = ([xml](Get-Content src/TldSaveEditor/TldSaveEditor.csproj)).Project.PropertyGroup.Version | Where-Object { $_ } | Select-Object -First 1
+            "args=" >> $env:GITHUB_OUTPUT
+          }
+          "version=$version" >> $env:GITHUB_OUTPUT
+
+      - name: Build solution
+        run: dotnet build TldSaveEditor.slnx -c Release
+
+      - name: Publish exe
+        run: dotnet publish src/TldSaveEditor -p:PublishProfile=win-x64 ${{ steps.version.outputs.args }}
+
+      - name: Zip
+        shell: pwsh
+        run: |
+          Compress-Archive -Path publish/win-x64/TldSaveEditor.exe, README.md, THIRD_PARTY_NOTICES.md `
+            -DestinationPath "publish/TldSaveEditor-${{ steps.version.outputs.version }}-win-x64.zip"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: TldSaveEditor-${{ steps.version.outputs.version }}-win-x64
+          path: publish/win-x64/TldSaveEditor.exe
+
+      - name: GitHub Release
+        if: github.ref_type == 'tag'
+        uses: softprops/action-gh-release@v2
+        with:
+          files: publish/TldSaveEditor-${{ steps.version.outputs.version }}-win-x64.zip
+          generate_release_notes: true

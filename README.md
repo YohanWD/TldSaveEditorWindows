@@ -27,6 +27,23 @@ editor requires its notice to be included.
 Before publishing, bump `<Version>` in `src/TldSaveEditor/TldSaveEditor.csproj`. The exe is not code-signed,
 so Windows SmartScreen shows "Windows protected your PC" the first time. Click *More info*, then *Run anyway*.
 
+### Automatic builds and releases (GitHub Actions)
+
+[.github/workflows/build.yml](.github/workflows/build.yml) runs on GitHub:
+
+- **Pushing a version tag:** builds the exe with that version and creates a GitHub Release with the zip.
+  Normal pushes to `master` don't build anything.
+
+```
+git tag v1.0.1
+git push origin v1.0.1
+```
+
+The tag sets the version (`v1.0.1` → 1.0.1), so you don't need to edit the csproj for a release.
+
+To test a build without releasing, open the Actions tab, select *Build*, and click *Run workflow*. The exe is
+attached to that run under *Artifacts*, with the version from the csproj.
+
 ## Projects
 
 | Project | What it does |
