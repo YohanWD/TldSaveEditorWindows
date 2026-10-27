@@ -157,7 +157,6 @@ it would replace, the editor shows a **DIFFERENT RUN** warning, so you don't rep
   below 5 are only shown for Fire starting and Cooking.
 - Items marked *story/challenge only* or *unverified name* in Add item were never seen in a Survival save and
   may not work. They are hidden unless you uncheck *Only items found in Survival saves*.
-- Curing afflictions has not been tested in game yet.
 - Use at your own risk, and keep backups.
 
 ---
@@ -266,4 +265,7 @@ The release workflow runs the tests before publishing: **a failing test blocks t
 - Load and save were checked against 22 real saves: decoded data is identical after a round trip.
 - Validated in game (2026-10-25) with [docs/TEST_SAVE_CHECKLIST.md](docs/TEST_SAVE_CHECKLIST.md): 66 added items
   of every component type, quantity / condition / remove edits, a game save, reload and re-edit. Player status
-  meters, Well Fed and skill levels too. Curing afflictions is not tested in game yet.
+  meters, Well Fed and skill levels too.
+- Validated in game on the October 2026 game update (changelist 188966), 2026-10-27: a pre-update save edited by
+  the editor (14 added items, status, skills, an injected sprained wrist) loaded and was converted by the new
+  version; the editor then read the game-written file, cured the sprain, and the game confirmed it was gone.
